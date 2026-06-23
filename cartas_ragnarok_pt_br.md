@@ -1,0 +1,557 @@
+# Cartas de Ragnarok Online - PT-BR
+
+Lista gerada a partir dos arquivos `mob_db_f5b4.yml` e `item_db_etc_b687.yml`, mantendo apenas nome e efeitos.
+
+Critério de separação: cartas dropadas por monstros com modo MVP ficam em MVP; monstros com `Class: Boss` sem MVP ficam em Mini Boss; os demais ficam em Normais. Cartas do `item_db` sem drop correspondente no `mob_db` ficam na seção sem classificação.
+
+Total: 538 cartas (364 normais, 41 mini boss, 44 MVP, 89 sem classificação).
+
+## Cartas Normais (364)
+
+- **Carta de Acidus** — Se refinamento for +4 ou menor: HP máximo +8%. SP máximo +8%. Recuperação de HP +5%. Recuperação de SP +5%. Caso contrário: HP máximo +4%. SP máximo +4%.
+- **Carta de Acidus Azul** — Se refinamento for +4 ou menor: Recuperação de SP +5%. SP máximo +80. Caso contrário: SP máximo +40.
+- **Carta de Agav** — ATQM +5%. DEF -10. Se classe base for Mago: SP máximo +100.
+- **Carta de Agressor** — Dano crítico +10%. Crítico contra a raça humanoide +7. Crítico contra a raça jogador humano +7.
+- **Carta de Alarme** — Chance de autoconjurar Chama Reveladora nv. 1 ao receber dano: 2%. HP máximo +300. VIT +1.
+- **Carta de Alice** — Resistência contra chefes +40%. Resistência contra monstros normais -40%.
+- **Carta de Alicel** — Esquiva +10. DEF -5.
+- **Carta de Aliot** — Se classe base for Espadachim ou classe base for Mercador ou classe base for Gatuno: FOR +2. HP máximo +5%. Se classe base for Mago ou classe base for Arqueiro ou classe base for Noviço: INT +2. SP máximo +5%.
+- **Carta de Aliza** — Chance de autoconjurar Piscadela nv. 1 ao receber dano: 50+50*(BaseJob == Job_Dancer).
+- **Carta de Alma da Ventania** — Chance de autoconjurar Júpiter nv. 3+7*(Júpiter nv. 10 aprendido) ao atacar: 0.2%.
+- **Carta de Alma Penada** — Adiciona chance de dropar 12027 ao derrotar monstros da raça morto-vivo: 2%.
+- **Carta de Am Mut** — Resistência contra a raça humanoide -20%. Resistência contra a raça jogador humano -20%. EXP recebida de monstros da raça humanoide +10%.
+- **Carta de Ambernite** — DEF +2.
+- **Carta de Anaconda** — Dano físico contra propriedade Veneno +20%.
+- **Carta de Ancião** — Dano físico contra 1285 +40%. Dano físico contra 1286 +40%. Dano físico contra 1287 +40%. Dano físico contra 1899 +40%. Dano físico contra 1900 +40%.
+- **Carta de Andarilho** — Se não o conjunto específico estiver equipado: Chance de autoconjurar Rapto nv. 1 ao atacar: 0.2%. Se classe base for Gatuno: Esquiva +20.
+- **Carta de Andre** — ATQ +20.
+- **Carta de Anjo Fajuto** — Recupera 5 SP ao derrotar monstros da raça anjo. Recupera -5 SP.
+- **Carta de Anolian** — Chance de autoconjurar Concentração nv. 1+9*(Concentração nv. 10 aprendida) ao receber dano: 0.3%.
+- **Carta de Anopheles** — Adiciona chance de dropar 12058 ao derrotar monstros da raça inseto: 1%.
+- **Carta de Antonio** — Chance de autoconjurar Teleporte nv. 1 ao receber dano: 5%.
+- **Carta de Anúbis** — Resistência contra a raça anjo +30%.
+- **Carta de Aparição** — Chance de causar Maldição ao receber dano: 20%.
+- **Carta de Apocalipse** — VIT +2. Se refinamento for +9 ou maior: HP máximo +800.
+- **Carta de Aqua Elemental** — Resistência contra propriedade Água +20%. Dano físico contra propriedade Água +5%.
+- **Carta de Aquecedor** — Crítico +3. Se classe base for Espadachim: Esquiva perfeita +3.
+- **Carta de Aranha Gigante** — Chance de causar Envenenamento ao receber dano: 6%.
+- **Carta de Archdam** — ATQ +10. Tempo de conjuração +20%.
+- **Carta de Arclouse** — Se refinamento for +5 ou menor: DEF +2. DEFM +3.
+- **Carta de Arenoso** — Encanta a armadura com propriedade Terra. DEF +1.
+- **Carta de Argiope** — Encanta a armadura com propriedade Veneno. DEF +1.
+- **Carta de Argos** — Resistência contra Petrificação 20%. DEF +1.
+- **Carta de Armeyer Dinze** — Adiciona chance de dropar 12053 ao derrotar monstros da raça peixe: 1%.
+- **Carta de Arvore Maldita** — Se refinamento for +5 ou menor: DEFM +5.
+- **Carta de Atirador de Pedras** — ATQ +10. Precisão +10.
+- **Carta de Atirador Wootan** — DEF +1. Resistência contra Confusão 20%.
+- **Carta de Bafomé Jr.** — AGI +3. Crítico +1.
+- **Carta de Banshee** — Se classe base for Mago: SP máximo +100. HP máximo -100. Dano da habilidade Ataque Espiritual +20%. Dano da habilidade Espíritos Anciões +20%. Dano da habilidade Vulcão Napalm +20%.
+- **Carta de Banshee Master** — INT +1. ATQM +10.
+- **Carta de Batedor** — Resistência contra propriedade Sombrio +15%. Resistência contra propriedade Morto-vivo +15%.
+- **Carta de Bathory** — Encanta a armadura com propriedade Sombrio.
+- **Carta de Bebe de Lobo do Deserto** — INT +1.
+- **Carta de Bebê Orc** — Se refinamento for +9 ou maior: Resistência contra propriedade Neutro +15%. Esquiva +15. Caso contrário: Resistência contra propriedade Neutro +10%. Esquiva +10.
+- **Carta de Bebê Selvagem** — Chance de causar Atordoamento ao atacar: 5%.
+- **Carta de Beholder** — Permite usar Cancelar Magia nv. 1.
+- **Carta de Besouro-chifre** — Resistência a ataques físicos à distância +35%.
+- **Carta de Besouro-ladrão** — AGI +1.
+- **Carta de Besouro-ladrão Fêmea** — AGI +1. Esquiva +1.
+- **Carta de Besouro-ladrão Macho** — AGI +2.
+- **Carta de Besouro-Rei** — Recupera 5 SP ao derrotar monstros da raça peixe. Recupera -5 SP.
+- **Carta de Bode** — Se refinamento for +5 ou menor: DEF +2. DEFM +5.
+- **Carta de Boneca de Miyabi** — SP máximo +10%. Dano da habilidade Rajada Congelante +5%.
+- **Carta de Bongun** — Chance de autoconjurar Golpe Fulminante nv. 1 ao atacar: 0.2%. A habilidade Golpe Fulminante empurra 5 células. DEF contra Acorn -100.
+- **Carta de Borboleta Sanguinária** — Tempo de conjuração +30%. Conjuração não pode ser interrompida. Dano da habilidade Barreira de Fogo +5%.
+- **Carta de Breeze** — ATQ +5. Chance de causar Sangramento ao atacar: 5%.
+- **Carta de Cãibra** — Chance de obter 500 zenys ao derrotar monstros: 0.01%.
+- **Carta de Caramelo** — Dano físico contra a raça inseto +20%.
+- **Carta de Caranguejo** — ATQ +5. Dano físico contra 1266 +30%.
+- **Carta de Carat** — INT +2. Se refinamento for +9 ou maior: SP máximo +150.
+- **Carta de Carniçal** — Resistência contra Envenenamento 20%. DEF +1.
+- **Carta de Cavaleiro do Abismo** — Dano físico contra chefes +25%.
+- **Carta de Cavalo-marinho** — Resistência contra propriedade Água +5%. Resistência contra Congelamento 100%.
+- **Carta de Cecil Damon** — Velocidade de ataque +5%. Dano da habilidade Rajada de Flechas +15%. Se arma for nível 3 ou 4 e refinamento for +9 ou maior: Dano da habilidade Rajada de Flechas +10%.
+- **Carta de Centipede** — Resistência contra propriedade Veneno +20%. Dano físico contra propriedade Veneno +5%.
+- **Carta de Centipede Larva** — INT +1. ATQM +3.
+- **Carta de Chepet** — Cura realizada +10%.
+- **Carta de Choco** — Esquiva perfeita +5. Esquiva +10.
+- **Carta de Chonchon** — AGI +1. Esquiva +2.
+- **Carta de Chonchon de Aço** — Resistência contra propriedade Vento +10%. DEF +2.
+- **Carta de Cobold Arqueiro** — Dano crítico +10%. Crítico contra a raça planta +7.
+- **Carta de Cobold de Machado** — FOR +1. Crítico +4.
+- **Carta de Cochicho** — Esquiva +10. Se FOR base for 80 ou maior: ATQ +20. Se VIT base for 80 ou maior: HP máximo +3%. Se SOR base for 80 ou maior: Crítico +3. Se refinamento for +9 ou maior: Taxa de crítico +5%.
+- **Carta de Coelho** — Efeito de recuperação de itens do grupo Carnes +50%. Adiciona chance de dropar 517 ao derrotar monstros da raça bruto: 2%. Adiciona chance de dropar 528 ao derrotar monstros da raça bruto: 2%.
+- **Carta de Condor** — Esquiva +10.
+- **Carta de Congelador** — HP máximo +300. Se refinamento for +9 ou maior: Dano da habilidade Golpe Fulminante +10%.
+- **Carta de Cookie** — SOR +2. Dano da habilidade Luz Divina +10%.
+- **Carta de Cookie Natalino** — Resistência contra a raça anjo -20%. EXP recebida de monstros da raça anjo +10%.
+- **Carta de Coringa** — Permite usar Furto nv. 1.
+- **Carta de Cornus** — Resistência contra propriedade Sagrado +20%. Dano físico contra propriedade Sagrado +5%.
+- **Carta de Cornutus** — Armadura não pode ser quebrada. DEF +1.
+- **Carta de Crânio Flamejante** — Resistência contra Cegueira 30%. Resistência contra Atordoamento 30%. Resistência contra Maldição 30%. Resistência contra Petrificação 30%. Chance de causar Cegueira ao receber dano: 5%. Chance de causar Atordoamento ao receber dano: 5%. Chance de causar Maldição ao receber dano: 5%. Chance de causar Petrificação ao receber dano: 5%.
+- **Carta de Creamy** — Permite usar Teleporte nv. 1.
+- **Carta de Creamy Ameaçador** — Chance de causar Confusão ao receber dano: 20%.
+- **Carta de Crocodilo** — Resistência a ataques físicos à distância +5%.
+- **Carta de Dark Shadow** — Resistência contra propriedade Sombrio +20%. Dano físico contra propriedade Sombrio +5%.
+- **Carta de Deletério** — Recuperação de SP -100%. SPGainValue: 10. Recupera -100 SP.
+- **Carta de Deviace** — Dano físico contra a raça humanoide +7%. Dano físico contra a raça jogador humano +7%. Dano físico contra a raça bruto +7%. Dano físico contra a raça jogador Doram +7%. Dano físico contra a raça planta +7%. Dano físico contra a raça inseto +7%.
+- **Carta de Deviruchi** — FOR +1. Resistência contra Cegueira 100%.
+- **Carta de Diabinho** — Resistência contra a raça bruto -20%. Resistência contra a raça jogador Doram -20%. EXP recebida de monstros da raça bruto +10%.
+- **Carta de Diabolik** — Recupera 5 SP ao derrotar monstros da raça demônio. Recupera -5 SP.
+- **Carta de Dimik** — VIT getrefine()-5.
+- **Carta de Dokebi** — Encanta a armadura com propriedade Vento. DEF +1.
+- **Carta de Donzela Verde** — SOR getrefine()-5. Crítico getrefine().
+- **Carta de Draco** — Resistência contra propriedade Terra +20%. Dano físico contra propriedade Terra +5%.
+- **Carta de Drainliar** — Dano físico contra propriedade Água +20%.
+- **Carta de Dríade** — Adiciona chance de dropar Green Live ao derrotar monstros da raça planta: 1%. Resistência contra propriedade Terra +10%.
+- **Carta de Drops** — DES +1. Precisão +3.
+- **Carta de Drosera** — Crítico à distância +15%.
+- **Carta de Druida Maligno** — Encanta a armadura com propriedade Morto-vivo. INT +1. DEF +1.
+- **Carta de Dullahan** — Dano crítico +10%. Crítico contra a raça dragão +7.
+- **Carta de Echio** — ATQ +15. Se classe base for Espadachim: HP máximo +500.
+- **Carta de Eggyra** — Recuperação de SP +15%.
+- **Carta de Egnigem Cenia** — FOR + INT base/18.
+- **Carta de Eremes Guile** — Precisão +10. Dano da habilidade ID 136 +15%. Se arma for nível 3 ou 4 e refinamento for +9 ou maior: Dano da habilidade ID 136 +10%.
+- **Carta de Ermitão Maligno** — Adiciona chance de dropar 12029 ao derrotar monstros da raça planta: 2%.
+- **Carta de Ermitão Selvagem** — Efeito de recuperação de itens do grupo Ervas +50%. Adiciona chance de dropar 507 ao derrotar monstros da raça planta: 3%. Adiciona chance de dropar 508 ao derrotar monstros da raça planta: 2%. Adiciona chance de dropar 509 ao derrotar monstros da raça planta: 1%.
+- **Carta de Errende Ebecee** — Chance de autoconjurar Escudo Sagrado nv. 1 ao receber dano: 0.5%.
+- **Carta de Escaravelho** — Chance de causar Silêncio ao receber dano: 6%.
+- **Carta de Escorpião** — Dano físico contra a raça planta +20%.
+- **Carta de Esfera Marinha** — Permite usar Impacto Explosivo nv. 3.
+- **Carta de Esporo** — VIT +2.
+- **Carta de Esporo Venenoso** — Permite usar Envenenar nv. 3.
+- **Carta de Esqueleto** — Chance de causar Atordoamento ao atacar: 5%.
+- **Carta de Esqueleto Arqueiro** — Dano físico à distância +10%.
+- **Carta de Esqueleto General** — Resistência contra a raça inseto -20%. EXP recebida de monstros da raça inseto +10%.
+- **Carta de Esqueleto Operário** — Dano físico contra tamanho Médio +15%. ATQ +5.
+- **Carta de Esqueleto Pirata** — Permite usar Desconto nv. 5.
+- **Carta de Esqueleto Prisioneiro** — Chance de causar Sono ao receber dano: 15%.
+- **Carta de Esqueleto Soldado** — Crítico +9.
+- **Carta de Estrela do Mar** — ATQ +5. Dano físico contra Voucher +30%.
+- **Carta de Estrondo** — Resistência contra a raça dragão -20%. EXP recebida de monstros da raça dragão +10%.
+- **Carta de Exterminador** — Recuperação de HP -100%. Recupera 100 HP ao derrotar um monstro.
+- **Carta de Exterminador** — HP máximo +(800 - 40 x refinamento). Recuperação de HP +10%.
+- **Carta de Fabre** — VIT +1. HP máximo +100.
+- **Carta de Familiar** — Chance de causar Cegueira ao atacar: 5%. ATQ +5.
+- **Carta de Fen** — Conjuração não pode ser interrompida. Tempo de conjuração +25%.
+- **Carta de Ferrão** — Recupera 5 SP ao derrotar monstros da raça inseto. Recupera -5 SP.
+- **Carta de Ferrão** — Resistência contra a raça amorfo -20%. EXP recebida de monstros da raça amorfo +10%.
+- **Carta de Ferus Escarlate** — Dano da habilidade Coluna de Fogo +5%. Dano da habilidade Chuva de Meteoros +5%. Recupera -50 SP.
+- **Carta de Ferus Verde** — VIT +1. HP máximo +10%.
+- **Carta de Filhote de Hatii** — Chance de autoconjurar Rajada Congelante nv. 3 ao atacar: 0.5%.
+- **Carta de Filhote de Leopardo** — SOR +3. Se classe base for Mercador: Armadura não pode ser quebrada.
+- **Carta de Flora** — Dano físico contra a raça peixe +20%.
+- **Carta de Foca** — Esquiva +3. Precisão +10. Se classe base for Noviço: Crítico contra a raça morto-vivo +9. Crítico contra a raça demônio +9.
+- **Carta de Fornalha Velha** — ATQ +5. INT +1.
+- **Carta de Frilldora** — Permite usar Furtividade nv. 1. Remove o estado Furtividade.
+- **Carta de Frus** — Reflete (refinamento x 2)% do dano mágico recebido. Se classe base for Mago: DEFM +3.
+- **Carta de Fumacento** — Permite usar Esconderijo nv. 1. Remove o estado Esconderijo.
+- **Carta de Furador** — Recupera 5 SP ao derrotar monstros da raça dragão. Recupera -5 SP.
+- **Carta de Gajomart** — Resistência contra a raça planta -20%. EXP recebida de monstros da raça planta +10%.
+- **Carta de Galápago** — Efeito de recuperação de itens do grupo Sucos +50%. Adiciona chance de dropar 531 ao derrotar monstros da raça inseto: 3%. Adiciona chance de dropar 532 ao derrotar monstros da raça inseto: 3%. Adiciona chance de dropar 534 ao derrotar monstros da raça inseto: 3%.
+- **Carta de Gárgula** — Adiciona chance de dropar 12028 ao derrotar monstros da raça inseto: 1%.
+- **Carta de Gato de Folha** — Resistência contra propriedade Água +10%. Adiciona chance de dropar Crystal Blue ao derrotar monstros da raça peixe: 1%.
+- **Carta de Gazeti** — Chance de autoconjurar Lanças de Gelo nv. 2 ao atacar: 1%.
+- **Carta de Gerente da Torre** — INT +1. Tempo de conjuração -5%.
+- **Carta de Giearth** — Resistência contra Confusão 100%. Resistência contra propriedade Terra +15%.
+- **Carta de Giro-Goblin** — Dano crítico +10%. Crítico contra a raça peixe +7.
+- **Carta de Goblin a vapor** — Dano crítico +10%. Crítico contra a raça amorfo +7.
+- **Carta de Goblin Arqueiro** — Dano crítico +10%. Crítico contra a raça morto-vivo +7.
+- **Carta de Goblin de Adaga** — Dano físico contra a raça bruto +20%. Dano físico contra a raça jogador Doram +20%.
+- **Carta de Goblin Líder** — Dano físico contra RC2 Goblin +30%.
+- **Carta de Golem** — Arma não pode ser quebrada. ATQ +5.
+- **Carta de Golem de Lava** — Dano físico contra RC2 Golem +30%.
+- **Carta de Golem de Madeira** — DEF +1. Recuperação de HP +30%.
+- **Carta de Golem Estalactítico** — DEF +1. Resistência contra Atordoamento 20%.
+- **Carta de Grand Orc** — DEF +1. Reflete 5% do dano físico corpo a corpo recebido.
+- **Carta de Grand Peco** — Chance de autoconjurar Glória nv. 1 ao receber dano: 0.5%.
+- **Carta de Gremlin** — Adiciona chance de dropar 12043 ao derrotar monstros da raça bruto: 1%.
+- **Carta de Grizzly** — Chance de causar Cegueira ao receber dano: 3%.
+- **Carta de Grove** — Adiciona chance de dropar 12063 ao derrotar monstros da raça amorfo: 0.5%.
+- **Carta de Guardião da Floresta** — Chance de autoconjurar Invocar Esferas Espirituais nv. 5 ao atacar: 2+18*(BaseClass == Job_Acolyte).
+- **Carta de Guerreiro Orc** — Resistência contra a raça bruto +30%. Resistência contra a raça jogador Doram +30%.
+- **Carta de Guerreiro Wootan** — DEF +1. Resistência contra Sangramento 20%.
+- **Carta de Gullinbursti** — Resistência contra a raça peixe -20%. EXP recebida de monstros da raça peixe +10%.
+- **Carta de Harpia** — Resistência contra propriedade Neutro +15%. Dano da habilidade Ataque Espiritual +5%.
+- **Carta de Hidra** — Dano físico contra a raça humanoide +20%. Dano físico contra a raça jogador humano +20%.
+- **Carta de Hillslion** — ATQ +25.
+- **Carta de Hode** — Resistência contra propriedade Terra +30%. Esquiva +5.
+- **Carta de Hodremlin** — Resistência contra todos os tamanhos +15%. Ao receber dano físico ou mágico, chance de ativar Esquiva perfeita +30 por 10 segundos.
+- **Carta de Holden** — SOR +2.
+- **Carta de Horong** — Permite usar Chama Reveladora nv. 1. Remove o estado Chama Reveladora.
+- **Carta de Howard Alt-Eisen** — Precisão +10. Dano da habilidade ID 485 +10%. Se arma for nível 3 ou 4 e refinamento for +9 ou maior: Dano da habilidade ID 485 +5%.
+- **Carta de Imp** — Dano da habilidade Lanças de Fogo +25%. Tempo de conjuração de Lanças de Fogo -25%.
+- **Carta de Incubus** — INT -3. Recuperação de SP -20%. SP máximo +150.
+- **Carta de Injustiçado** — Chance de autoconjurar Impacto Selvagem nv. 1 ao atacar: 0.5%.
+- **Carta de Isilla** — INT +2. Ao causar dano mágico, chance de ativar Tempo de conjuração -50% e Esquiva +30 por 5 segundos.
+- **Carta de Ísis** — Resistência contra propriedade Sombrio +30%. Esquiva +5.
+- **Carta de Jakk** — Resistência contra propriedade Fogo +30%. Esquiva +5.
+- **Carta de Jiboia** — Chance de causar Envenenamento ao atacar: 5%. ATQ +5.
+- **Carta de Jing Guai** — Adiciona chance de dropar 12033 ao derrotar monstros da raça anjo: 1%.
+- **Carta de Jirtas** — SOR +2. Dano da habilidade Flecha Melódica +50%. Dano da habilidade Estilingue +50%. Se refinamento for +9 ou maior: Resistência contra a raça humanoide +30%.
+- **Carta de Kaho** — Dano físico contra propriedade Terra +20%.
+- **Carta de Kapha** — Se refinamento for +5 ou menor: DEFM +8.
+- **Carta de Karakasa** — Chance de causar Confusão ao receber dano: 300+600*(FOR base >= 77).
+- **Carta de Kathryne Keyron** — DES +1. Precisão +10. Dano da habilidade ID 89 +15%. Se arma for nível 3 ou 4 e refinamento for +9 ou maior: Dano da habilidade ID 89 +10%.
+- **Carta de Kavach Icarus** — Se refinamento for +4 ou menor: Esquiva +20. Esquiva perfeita +1. Caso contrário: Esquiva +10.
+- **Carta de Khalitzburg** — Resistência contra a raça demônio +30%.
+- **Carta de Knocker** — Dano físico contra a raça amorfo +5%. Adiciona chance de dropar Rough Oridecon ao derrotar monstros da raça amorfo: 0.1%. Adiciona chance de dropar Rough Elunium ao derrotar monstros da raça amorfo: 0.1%.
+- **Carta de Koko** — Resistência contra Sono 20%. DEF +1.
+- **Carta de Kraben** — Chance de causar Cegueira ao receber dano: 6%.
+- **Carta de Kukre** — AGI +2.
+- **Carta de Labareda** — Adiciona chance de dropar itens do grupo Comidas (taxa do script: 60000).
+- **Carta de Lagarta** — Recupera 5 SP ao derrotar monstros da raça planta. Recupera -5 SP.
+- **Carta de Laurell Weinder** — Dano da habilidade Congelar +3%. Dano da habilidade Nevasca +3%. Recupera -50 SP.
+- **Carta de Lavadeira** — AGI +1. Esquiva +10. Dano da habilidade Rajada de Flechas +5%. Dano da habilidade Chuva de Flechas +5%.
+- **Carta de Leib Olmai** — Resistência contra propriedade Fogo +10%. Adiciona chance de dropar Red Blood ao derrotar monstros da raça bruto: 1%.
+- **Carta de Líder Cobold** — Dano físico contra RC2 Kobold +30%.
+- **Carta de Lobo** — ATQ +15. Crítico +1.
+- **Carta de Lobo do Deserto** — Dano físico contra tamanho Pequeno +15%. ATQ +5.
+- **Carta de Loli Ruri** — Chance de autoconjurar Curar nv. 3 ao receber dano: 0.5%.
+- **Carta de Lontra** — Efeito de recuperação de itens do grupo Peixes +50%. Adiciona chance de dropar 551 ao derrotar monstros da raça peixe: 3%. Adiciona chance de dropar 544 ao derrotar monstros da raça peixe: 3%.
+- **Carta de Louva-a-Deus** — FOR +3.
+- **Carta de Luciola Vespa** — Resistência contra propriedade Vento +20%. Dano físico contra propriedade Vento +5%.
+- **Carta de Lude** — Se classe for Aprendiz ou classe for Superaprendiz: Chance de autoconjurar Vigor nv. 1 ao receber dano: 2%.
+- **Carta de Lunático** — SOR +1. Crítico +1. Esquiva perfeita +1.
+- **Carta de Magmaring** — ATQ +5. Dano físico contra propriedade Terra +10%. Crítico contra a raça bruto +15. Crítico contra a raça jogador Doram +15. Crítico contra a raça planta +15.
+- **Carta de Magnólia** — Chance de causar Maldição ao atacar: 5%. ATQ +5.
+- **Carta de Majouros** — Chance de causar Atordoamento ao receber dano: 20%.
+- **Carta de Mandrágora** — Dano físico contra propriedade Vento +20%.
+- **Carta de Mantis Assassino** — Chance de causar Sangramento ao receber dano: 6%.
+- **Carta de Mao Guai** — Dano físico contra propriedade Fantasma +20%.
+- **Carta de Marduk** — Resistência contra Silêncio 100%.
+- **Carta de Margaretha Sorin** — DES +1. Precisão +10. Dano da habilidade ID 79 +15%. Se arma for nível 3 ou 4 e refinamento for +9 ou maior: Dano da habilidade ID 79 +10%.
+- **Carta de Marin** — Adiciona chance de dropar Jellopy: 20%. Adiciona chance de dropar Large Jellopy: 0.1%.
+- **Carta de Marina** — Chance de causar Congelamento ao atacar: 5%. ATQ +5.
+- **Carta de Marionete** — Resistência contra propriedade Fantasma +30%. Esquiva +5.
+- **Carta de Marte** — Resistência contra propriedade Água +30%. Esquiva +5.
+- **Carta de Martin** — Resistência contra Cegueira 20%. DEF +1.
+- **Carta de Mascarado** — Chance de causar Silêncio ao receber dano: 300+600*(VIT base >= 77).
+- **Carta de Matyr** — HP máximo +10%. AGI +1.
+- **Carta de Medusa** — Resistência contra a raça demônio +15%. Resistência contra Petrificação 100%.
+- **Carta de Megalith** — Se refinamento for +5 ou menor: DEFM +7.
+- **Carta de Megalodon** — Resistência contra Congelamento 20%. DEF +1.
+- **Carta de Metaling** — Chance de autoconjurar Remover Arma nv. 1 ao atacar: 0.5%.
+- **Carta de Metaller** — Chance de causar Silêncio ao atacar: 5%. ATQ +5.
+- **Carta de Mi Gao** — DEF contra 1285 -50. DEF contra 1286 -50. DEF contra 1287 -50. DEF contra 1899 -50. DEF contra 1900 -50.
+- **Carta de Mímico** — Adiciona chance de dropar 603: 0.8%.
+- **Carta de Mímico Ancião** — AGI + SOR base/18.
+- **Carta de Mineiros** — Dano da habilidade Coluna de Pedra +5%. Dano da habilidade Fúria da Terra +5%. Recupera -50 SP.
+- **Carta de Mineral** — ATQ -25. DEF +3.
+- **Carta de Minorous** — Dano físico contra tamanho Grande +15%. ATQ +5.
+- **Carta de Moldura Maldita** — Chance de causar Petrificação ao receber dano: 20%.
+- **Carta de Molusco** — ATQ +5. Dano físico contra Voucher +30%.
+- **Carta de Mosca Caçadora** — Chance de absorver HP ao atacar: 0.3%; absorve 15% do dano.
+- **Carta de Muka** — Recuperação de HP +10%.
+- **Carta de Múmia** — Precisão +20.
+- **Carta de Múmia Anciã** — Chance de autoconjurar Signum Crucis nv. 5 ao receber dano: 0.3%.
+- **Carta de Munak** — Resistência contra Petrificação 15%. Resistência contra propriedade Terra +5%. DEF +1.
+- **Carta de Muscipular** — Chance de autoconjurar Curar nv. 1 ao receber dano: 1%. Chance de autoconjurar Aumentar Agilidade nv. 1 ao receber dano: 1%.
+- **Carta de Nereida** — Recupera 5 SP ao derrotar monstros da raça bruto. Recupera 5 SP ao derrotar monstros da raça jogador Doram. Recupera -5 SP.
+- **Carta de Névoa** — Resistência contra propriedade Veneno +30%. Esquiva +5.
+- **Carta de Ninfa Perversa** — INT +1. SP máximo +50.
+- **Carta de Nove Caudas** — AGI +2. Se refinamento for +9 ou maior: Esquiva +20.
+- **Carta de Novus** — HP máximo +500. Recuperação de HP +10%.
+- **Carta de Novus** — Chance de causar Confusão ao receber dano: 30%.
+- **Carta de Nuvem Tóxica** — Resistência a ataques físicos à distância +10%. Resistência contra propriedade Neutro +10%.
+- **Carta de Nuvem Venenosa** — Chance de causar Envenenamento ao receber dano: 30%.
+- **Carta de Obeaune** — Permite usar Curar estado negativo nv. 1.
+- **Carta de Obsidiana** — VIT + DES base/18.
+- **Carta de Orc Arqueiro** — Adiciona chance de dropar 12034 ao derrotar monstros da raça humanoide: 2%.
+- **Carta de Orc Esqueleto** — Dano físico contra propriedade Sagrado +20%.
+- **Carta de Orc Zumbi** — Resistência contra propriedade Morto-vivo +30%. Esquiva +5.
+- **Carta de Ovo de Andre** — HP máximo +5%.
+- **Carta de Ovo de Besouro-ladrão** — HP máximo +400.
+- **Carta de Ovo de Dragão** — Adiciona chance de dropar 12048 ao derrotar monstros da raça dragão: 0.5%.
+- **Carta de Ovo de Peco Peco** — Dano físico contra a raça amorfo +20%.
+- **Carta de Palavra Morta** — Dano da habilidade Ataque Espiritual +5%. Dano da habilidade Espíritos Anciões +5%. Dano da habilidade Vulcão Napalm +5%. Recupera -50 SP.
+- **Carta de Panzer Goblin** — Dano crítico +10%. Crítico contra a raça demônio +7.
+- **Carta de Papel** — Dano crítico +20%. Consome 1 SP ao atacar.
+- **Carta de Parasita** — DEF +1. Resistência contra a raça amorfo +5%.
+- **Carta de Pasana** — Encanta a armadura com propriedade Fogo. DEF +1.
+- **Carta de Pé-Grande** — Resistência contra a raça inseto +30%.
+- **Carta de Peco Peco** — HP máximo +10%.
+- **Carta de Peixe-espada** — Encanta a armadura com propriedade Água. DEF +1.
+- **Carta de Penomena** — Resistência contra a raça amorfo +30%.
+- **Carta de Percevejo** — Resistência contra Silêncio 20%. DEF +1.
+- **Carta de Pesadelo** — Resistência contra Sono 100%. AGI +1.
+- **Carta de Pesadelo Sombrio** — Chance de causar Maldição ao receber dano: 15%.
+- **Carta de Pessegueira Encantada** — Chance de autoconjurar Curar nv. 1+9*(Curar nv. 10 aprendido) ao atacar: 0.2%.
+- **Carta de Peste** — Chance de causar Petrificação ao receber dano: 1500+700*(INT base >= 77).
+- **Carta de Petite Terrestre** — Dano físico contra a raça dragão +20%.
+- **Carta de Petite Voador** — Resistência contra a raça dragão +30%.
+- **Carta de Phendark** — Recupera 5 SP ao derrotar monstros da raça humanoide. Recupera 5 SP ao derrotar monstros da raça jogador humano. Recupera -5 SP.
+- **Carta de Picky** — FOR +1. ATQ +10.
+- **Carta de Picky com Casca** — VIT +1. HP máximo +100.
+- **Carta de Pirralho** — Efeito de recuperação de itens do grupo Doces +50%. Adiciona chance de dropar 529 ao derrotar monstros da raça humanoide: 3%. Adiciona chance de dropar 530 ao derrotar monstros da raça humanoide: 1%.
+- **Carta de Plâncton** — Chance de causar Sono ao atacar: 5%. ATQ +5.
+- **Carta de Planta Carnívora** — Chance de autoconjurar Bênção nv. 2+8*(Bênção nv. 10 aprendida) ao receber dano: 0.3%.
+- **Carta de Plasma Fantasma** — Adiciona chance de dropar 12118: 0.5%. Adiciona chance de dropar 12119: 0.5%. Adiciona chance de dropar 12120: 0.5%. Adiciona chance de dropar 12121: 0.5%.
+- **Carta de Poeira** — Resistência contra propriedade Vento +30%. Esquiva +5.
+- **Carta de Poltergeist** — ClassChange: 100.
+- **Carta de Poodle Infernal** — Precisão +1. Efeito de recuperação de 517 +100%. Chance de causar Sangramento ao atacar: 0.5%.
+- **Carta de Poporing** — Permite usar Desintoxicar nv. 1.
+- **Carta de Porcellio** — ATQ +25. DEF -5.
+- **Carta de Poring** — SOR +2. Esquiva perfeita +1.
+- **Carta de Poring Noel** — Dano físico contra propriedade Sombrio +20%.
+- **Carta de Presente** — Adiciona chance de dropar 644: 1.5%.
+- **Carta de Pungus** — Chance de causar Sono ao receber dano: 20%.
+- **Carta de Punk** — Chance de autoconjurar Pântano dos Mortos nv. 1+4*(Pântano dos Mortos nv. 5 aprendido) ao receber dano: 0.5%.
+- **Carta de Pupa** — HP máximo +700.
+- **Carta de Quve** — Se classe for Aprendiz ou classe for Superaprendiz: Chance de autoconjurar Aumentar Agilidade nv. 1 ao receber dano: 1%.
+- **Carta de Rabo de verme** — DES +2.
+- **Carta de Rafflesia** — Resistência contra a raça peixe +30%.
+- **Carta de Raggler** — FOR +1. VIT +1.
+- **Carta de Raydric** — Resistência contra propriedade Neutro +20%.
+- **Carta de Raydric Arqueiro** — Adiciona chance de dropar 12030 ao derrotar monstros da raça demônio: 3%.
+- **Carta de Relógio** — Chance de autoconjurar Bloqueio nv. 3+7*(Bloqueio nv. 10 aprendido) ao receber dano: 0.3%.
+- **Carta de Réquiem** — Chance de causar Confusão ao atacar: 5%.
+- **Carta de Rideword** — INT +1. Se classe base for Noviço: INT +1. DEFM +1.
+- **Carta de Rochoso** — Adiciona chance de dropar 12031 ao derrotar monstros da raça peixe: 3%.
+- **Carta de Rocker** — DES +1. ATQ +5.
+- **Carta de Rosa Selvagem** — AGI +1. Se classe base for Gatuno: Esquiva perfeita +5.
+- **Carta de Roween** — Esquiva +5. Esquiva perfeita +3. Dano físico contra propriedade Água +10%. Crítico contra a raça peixe +15.
+- **Carta de Rybio** — Chance de causar Atordoamento ao receber dano: 1500+700*(DES base >= 77).
+- **Carta de Salgueiro** — SP máximo +80.
+- **Carta de Salgueiro Ancião** — INT +2.
+- **Carta de Sapo de Rodda** — HP máximo +400. SP máximo +50.
+- **Carta de Sapo de Thara** — Resistência contra a raça humanoide +30%. Resistência contra a raça jogador humano +30%.
+- **Carta de Sapo Venenoso** — Chance de autoconjurar Envenenar nv. 1 ao atacar: 0.2%. A habilidade 52 empurra 5 células.
+- **Carta de Sasquatch** — Chance de causar Congelamento ao receber dano: 20%.
+- **Carta de Seeker** — Permite usar Petrificar nv. 1. Resistência contra Petrificação 30%. DEFM +10.
+- **Carta de Selvagem** — VIT +3.
+- **Carta de Senhora Orc** — Dano físico contra 3 +30%.
+- **Carta de Serial Killer** — Dano crítico +10%. Crítico contra a raça inseto +7.
+- **Carta de Seyren Windsor** — Precisão +10. Dano da habilidade ID 62 +15%. Se arma for nível 3 ou 4 e refinamento for +9 ou maior: Dano da habilidade ID 62 +10%.
+- **Carta de Shinobi** — AGI +1. Chance de autoconjurar Furtividade nv. 5 ao receber dano: 1%.
+- **Carta de Siroma** — Dano da habilidade Lanças de Gelo +25%. Tempo de conjuração de Lanças de Gelo -25%.
+- **Carta de Skogul** — Chance de causar Sangramento ao receber dano: 30%.
+- **Carta de Sohee** — SP máximo +15%. Recuperação de SP +3%.
+- **Carta de Soldadinho de Chumbo** — Dano crítico +10%. Crítico contra a raça bruto +7. Crítico contra a raça jogador Doram +7.
+- **Carta de Soldado** — DEF +2. DEFM +2.
+- **Carta de Soldado Atirador** — FOR +2. Se refinamento for +9 ou maior: HP máximo +10%. SP máximo +10%.
+- **Carta de Sorrateiro** — Permite usar Ataque Duplo nv. 1.
+- **Carta de Stapo** — Permite usar Procurar Pedras nv. 1. Permite usar Arremessar Pedra nv. 1.
+- **Carta de Sting** — DEF +2. Se refinamento for +9 ou maior: DEFM +5.
+- **Carta de Strouf** — Dano físico contra a raça demônio +20%.
+- **Carta de Succubus** — VIT -3. Recuperação de HP -20%. HP máximo +1000.
+- **Carta de Sussurro** — Esquiva +20. Resistência contra propriedade Fantasma -50%.
+- **Carta de Talo de Verme** — Adiciona chance de dropar 12032 ao derrotar monstros da raça bruto: 3%.
+- **Carta de Tamruan** — DEF +2. Dano da habilidade Escudo Bumerangue +10%. Dano da habilidade Punição Divina +10%.
+- **Carta de Tarou** — FOR +2.
+- **Carta de Tatacho** — Resistência contra propriedade Neutro +20%. Dano físico contra propriedade Neutro +5%.
+- **Carta de Tengu** — Adiciona chance de dropar itens do grupo Itens de recuperação (taxa do script: 600000).
+- **Carta de Titã de Gelo** — VIT +2. Ao receber dano físico ou mágico, chance de ativar DEF +10 por 10 segundos.
+- **Carta de Trilobita** — Recupera 5 SP ao derrotar monstros da raça amorfo. Recupera -5 SP.
+- **Carta de Tritão** — Recuperação de HP +10%. Recuperação de SP +10%.
+- **Carta de Ungoliant** — Resistência contra Atordoamento 0.2%. Se refinamento for +9 ou maior: Resistência contra Atordoamento 0.1%.
+- **Carta de Ursinho** — Resistência contra a raça morto-vivo +30%.
+- **Carta de Vadon** — Dano físico contra propriedade Fogo +20%.
+- **Carta de Vanberk** — FOR +2. Ao atacar, chance de ativar Crítico +100 por 5 segundos.
+- **Carta de Venatu** — SOR + AGI base/18.
+- **Carta de Vento da Colina** — Dano da habilidade Tempestade de Raios +5%. Dano da habilidade Júpiter +5%. Dano da habilidade Ira de Thor +5%. Recupera -50 SP.
+- **Carta de Verit** — HP máximo +8%. SP máximo +8%.
+- **Carta de Verme Ancião** — Resistência contra a raça demônio -20%. EXP recebida de monstros da raça demônio +10%.
+- **Carta de Verme Sábio** — Adiciona chance de dropar Yellow Gemstone: 0.6%. Adiciona chance de dropar Red Gemstone: 0.6%. Adiciona chance de dropar Blue Gemstone: 0.6%.
+- **Carta de Violinista** — Chance de autoconjurar Piada Infame nv. 1+4*(Piada Infame nv. 5 aprendida) ao atacar: 0.2%.
+- **Carta de Vitata** — Permite usar Curar nv. 1. Consumo de SP +25%.
+- **Carta de Vocal** — DEFM +3.
+- **Carta de Wickebine Tres** — Chance de autoconjurar Remover Armadura nv. 1 ao atacar: 0.5%.
+- **Carta de Yakuza** — Dano crítico +15%. Se classe base for Gatuno: Crítico +4. Se refinamento for +9 ou maior: Dano crítico +10%.
+- **Carta de Yao Jun** — Esquiva +15. Crítico +1.
+- **Carta de Yeti** — Adiciona chance de dropar 536: 20%. Efeito de recuperação de 536 +100%.
+- **Carta de Yoyo** — Esquiva perfeita +5. AGI +1.
+- **Carta de Zangão** — FOR +1. ATQ +3.
+- **Carta de Zangão Gigante** — Resistência contra propriedade Vento +10%. Adiciona chance de dropar Wind of Verdure ao derrotar monstros da raça inseto: 1%.
+- **Carta de Zenorc** — Chance de causar Envenenamento ao atacar: 4%. ATQ +10.
+- **Carta de Zerom** — DES +3.
+- **Carta de Zhu Po Long** — AGI +1. Crítico +3.
+- **Carta de Zipper** — ATQ +30. Consome 1 SP ao atacar. Se classe base for Mercador: Arma não pode ser quebrada.
+- **Carta de Zumbi** — Recuperação de HP +20%.
+- **Carta de Zumbi Atirador** — Crítico contra a raça humanoide +5. Crítico contra a raça jogador humano +5. Dano físico contra a raça humanoide +1%. Dano físico contra a raça jogador humano +1%. Dano mágico contra a raça humanoide +1%. Dano mágico contra a raça jogador humano +1%. Chance de causar Sangramento: 0.1%.
+- **Carta de Zumbi Dilacerado** — Dano físico contra a raça humanoide +1%. Dano físico contra a raça jogador humano +1%. Dano mágico contra a raça humanoide +1%. Dano mágico contra a raça jogador humano +1%. Recupera 50 HP ao derrotar um monstro.
+- **Carta de Zumbi Mestre** — Recupera 5 SP ao derrotar monstros da raça morto-vivo. Recupera -5 SP.
+- **Carta de Zumbi Prisioneiro** — Resistência contra a raça morto-vivo -20%. EXP recebida de monstros da raça morto-vivo +10%.
+
+## Cartas de Mini Boss (41)
+
+- **Carta de Angeling** — Encanta a armadura com propriedade Sagrado.
+- **Carta de ArchAngeling** — Dano da habilidade Grand Cross +10%. Se refinamento for +9 ou maior: Resistência contra propriedade Sagrado +15%.
+- **Carta de Barão Coruja** — Chance de autoconjurar Lex Aeterna nv. 1 ao atacar: 0.3%.
+- **Carta de Baronesa da Retribuição** — Adiciona chance de dropar 12068 ao derrotar monstros da raça anjo: 0.5%.
+- **Carta de Bow Master** — Se arma equipada for arco: Precisão +5. Crítico +5. Dano da habilidade Chuva de Flechas +50%.
+- **Carta de Byorgue** — Se classe for Arruaceiro: ATQM +10%. Dano físico contra todos os alvos +10%.
+- **Carta de Cavaleiro Sanguinário** — Chance de autoconjurar Chuva de Meteoros nv. 1 ao atacar: 0.2%. Se refinamento for +9 ou maior: Chance de autoconjurar Chuva de Meteoros nv. 3 ao atacar: 0.5%.
+- **Carta de Dama da Guarda** — DES + VIT base/18.
+- **Carta de Dark Priest** — Resistência contra propriedade Neutro +20%. Se refinamento for +9 ou maior: Resistência contra propriedade Neutro +5%.
+- **Carta de Despero de Thanatos** — INT + refinamento - 6.
+- **Carta de Deviling** — Resistência contra propriedade Neutro +50%. Resistência contra propriedade Água -50%. Resistência contra propriedade Terra -50%. Resistência contra propriedade Fogo -50%. Resistência contra propriedade Vento -50%. Resistência contra propriedade Veneno -50%. Resistência contra propriedade Sagrado -50%. Resistência contra propriedade Sombrio -50%. Resistência contra propriedade Fantasma -50%. Resistência contra propriedade Morto-vivo -50%.
+- **Carta de Dragão Mutante** — ATQ +25. Ao atacar, chance de ativar ATQ +20 por 20 segundos.
+- **Carta de Duque Coruja** — Chance de autoconjurar Impositio Manus nv. 3 ao atacar: 0.03%.
+- **Carta de Eclipse** — VIT +1.
+- **Carta de Entweihen Crothen** — ATQM +100.
+- **Carta de Executora** — Resistência contra tamanho Grande +25%. DEF +1.
+- **Carta de Galion** — Precisão +5. Dano físico contra propriedade Água +5%.
+- **Carta de Gato de Nove Caudas** — DEFM +3. Reflete 5% do dano mágico recebido. Se refinamento for +9 ou maior: Ignora 15% da DEFM de chefes.
+- **Carta de Gemini-S58** — Se AGI base for 90 ou maior: Resistência contra Silêncio 30%. Resistência contra Atordoamento 30%. Se VIT base for 80 ou maior: Resistência contra Petrificação 50%. Resistência contra Sono 50%.
+- **Carta de Ghostring** — Encanta a armadura com propriedade Fantasma. Recuperação de HP -25%.
+- **Carta de Grifo** — Velocidade de ataque +5%. Se refinamento for +9 ou maior: Dano da habilidade Redenção +25%.
+- **Carta de Hidrolancer** — Dano físico contra a raça dragão +10%.
+- **Carta de Ilusão das Trevas** — HP máximo -10%. SP máximo -10%. Tempo de conjuração -10%. Se refinamento for +9 ou maior: HP máximo +10%. SP máximo +10%.
+- **Carta de Kasa** — Dano físico contra propriedade Terra +20%. Se refinamento for +9 ou maior: Dano da habilidade Perfurar em Espiral +10%.
+- **Carta de Lady Solace** — Se classe for Sacerdote: Chance de autoconjurar Grand Cross nv. 5 ao atacar: 0.2%.
+- **Carta de Libélula** — AGI +1.
+- **Carta de Lobo Errante** — FOR +1.
+- **Carta de Maero de Thanatos** — ATQ +5. Chance de autoconjurar Diminuir Agilidade nv. 3 ao atacar: 0.5%.
+- **Carta de Mastering** — SOR +1.
+- **Carta de Maya Macho** — Permite ver monstros invisíveis.
+- **Carta de Mysteltainn** — Resistência contra tamanho Pequeno +25%. DEF +1.
+- **Carta de Necromancer** — Se arma equipada for cajado: INT +1. Ignora 2% da DEFM de monstros normais. Ignora 2% da DEFM de chefes.
+- **Carta de Odium of Thanatos** — AGI + refinamento - 5.
+- **Carta de Pesar de Thanatos** — Dano mágico contra a raça anjo +10%.
+- **Carta de Quimera** — Ignora 10% da DEF de monstros normais. Se refinamento for +9 ou maior: Ignora 5% da DEF de monstros normais.
+- **Carta de Salamandra** — Dano da habilidade Coluna de Fogo +40%. Dano da habilidade Chuva de Meteoros +40%.
+- **Carta de Sapo-Cururu** — Esquiva perfeita +1.
+- **Carta de Senhora do Abrigo** — INT + FOR base/18.
+- **Carta de Skeggiold** — Dano mágico contra a raça demônio +2%.
+- **Carta de Sword Master** — Se arma equipada for espada de uma mão ou arma equipada for espada de duas mãos: Precisão +5. Crítico +5. Dano da habilidade ID 62 +25%.
+- **Carta de Tirfing** — Resistência contra tamanho Médio +25%. DEF +1.
+
+## Cartas MVP (44)
+
+- **Carta de Abelha-rainha** — Remove o consumo de gemas das habilidades. Consumo de SP +25%.
+- **Carta de Algoz Eremes** — Permite usar Furtividade nv. 3. Remove o estado Furtividade.
+- **Carta de Amon Ra** — Todos os atributos +1. Chance de autoconjurar Kyrie Eleison nv. 10 ao receber dano: (30+70*(INT base >= 99)).
+- **Carta de Arquimaga Kathryne** — Ignora 100% da DEFM de monstros normais. Tempo de conjuração +100%. Recuperação de SP -100%. Recupera -2000 SP.
+- **Carta de Atiradora-de-elite Cecil** — Chance de absorver HP ao atacar: 0.5%; absorve 20% do dano. Recuperação de HP -10%.
+- **Carta de Atroce** — ATQ +25. Ao atacar, chance de ativar Velocidade de ataque +100% por 10 segundos.
+- **Carta de Bafomé** — Dano físico contra todos os alvos +10%. Se refinamento for +9 ou maior: Dano físico contra todos os alvos +5%.
+- **Carta de Belzebu** — Tempo de conjuração -30%.
+- **Carta de Besouro-ladrão Dourado** — Anula dano mágico recebido. Consumo de SP +100%.
+- **Carta de Bispo Decadente** — ATQM +10%. SP máximo -50%. Dano mágico contra a raça anjo +50%. Dano mágico contra a raça humanoide +50%. Dano mágico contra a raça jogador humano +50%.
+- **Carta de Cavaleiro da Tempestade** — Chance de autoconjurar Nevasca nv. 2 ao atacar: 0.2%. Chance de causar Congelamento ao atacar: 20%.
+- **Carta de Detardeurus** — DEFM -20. Resistência contra Congelamento 100%. Chance de autoconjurar Proteger Terreno nv. 1 ao receber dano: 0.7%.
+- **Carta de Doppelganger** — Velocidade de ataque +10%. Se refinamento for +9 ou maior: Velocidade de ataque +5%.
+- **Carta de Drácula** — Chance de absorver SP ao atacar: 1%; absorve 5% do dano.
+- **Carta de Drake** — Ignora penalidade de tamanho da arma. Ignora 50% da DEF de chefes.
+- **Carta de Eddga** — HP máximo -25%. Remove o atraso ao andar. Se refinamento for +9 ou maior: HP máximo +25%.
+- **Carta de Egnigem Cenia** — HP máximo +10%. SP máximo +10%. Regenera 50 HP a cada 10000 ms. Regenera 10 SP a cada 10000 ms. Se refinamento for +9 ou maior: HP máximo +10%. SP máximo +10%.
+- **Carta de Faraó** — Consumo de SP -30%.
+- **Carta de Flor do Luar** — Velocidade de movimento +25%. Se refinamento for +9 ou maior: HP máximo +20%.
+- **Carta de Freeoni** — Precisão +100.
+- **Carta de General Tartaruga** — Dano físico contra todos os alvos +20%. Chance de autoconjurar Impacto Explosivo nv. 10 ao atacar: 0.3%. Se arma for nível 3 ou 4 e refinamento for +9 ou maior: Dano físico contra todos os alvos +10%.
+- **Carta de Hatii** — Chance de causar Congelamento ao receber dano: 50%.
+- **Carta de Ifrit** — ATQ (JobLevel/10). Crítico (JobLevel/10). Precisão (JobLevel/10). Chance de autoconjurar NPC EARTHQUAKE nv. 2 ao receber dano: 0.1%.
+- **Carta de Kiel D-01** — Pós-conjuração -30%.
+- **Carta de Ktullanux** — Dano físico contra propriedade Fogo +50%. Chance de autoconjurar Congelar nv. 10 ao receber dano: 0.2%.
+- **Carta de Lady Branca** — Cura realizada +30%. Se refinamento for +9 ou maior: Pós-conjuração -15%.
+- **Carta de Lady Tanee** — HP máximo -40%. SP máximo +50%. Adiciona chance de dropar 513: 2%. Efeito de recuperação de 513 +100%.
+- **Carta de Lorde Seyren** — Permite usar Frenesi nv. 1. HP máximo -50%.
+- **Carta de Maya** — Reflete 30% do dano mágico recebido. Se refinamento for +9 ou maior: Resistência contra todas as raças +20%.
+- **Carta de Memória de Thanatos** — Ataques ignoram a DEF de todos os alvos. Consome 1 SP ao atacar. DEF -30. Esquiva -30.
+- **Carta de Mestre-ferreiro Howard** — Chance de quebrar a arma do alvo: 10%. Chance de quebrar a armadura do alvo: 7%.
+- **Carta de Orc Hero** — VIT +3. Resistência contra Atordoamento 100%.
+- **Carta de Osíris** — Recupera HP e SP ao reviver. ATQ +50. ATQM +50.
+- **Carta de Pesar Noturno** — Dano físico contra propriedade Sagrado +40%. Dano físico contra propriedade Sombrio +40%. Dano físico contra a raça anjo +40%. Dano físico contra a raça demônio +40%.
+- **Carta de RSX-0806** — VIT +3. Armadura não pode ser quebrada. Não sofre empurrão.
+- **Carta de Sacerdotisa Margaretha** — Chance de autoconjurar Assumptio nv. 1 ao receber dano: 0.5%.
+- **Carta de Samurai Encarnado** — Ignora a DEF de monstros normais. Recuperação de HP -100%. Perde 666 HP a cada 10000 ms. Se HP <= 999 e não getmapflag(strcharinfo(3),mf_pvp) e não getmapflag(strcharinfo(3),mf_pvp_noparty) e não getmapflag(strcharinfo(3),mf_pvp_noguild): Recupera (1-HP) HP. Caso contrário: Recupera -999 HP.
+- **Carta de Senhor das Trevas** — Chance de autoconjurar Chuva de Meteoros nv. 5 ao receber dano: 1%.
+- **Carta de Senhor dos Mortos** — Chance de causar Atordoamento ao atacar: 5%. Chance de causar Maldição ao atacar: 5%. Chance de causar Silêncio ao atacar: 5%. Chance de causar Envenenamento ao atacar: 5%. Chance de causar Sangramento ao atacar: 5%. Chance de causar Coma em monstros normais: 0.01%.
+- **Carta de Senhor dos Orcs** — Reflete 30% do dano físico corpo a corpo recebido.
+- **Carta de Serpente Suprema** — INT +3. Resistência contra Cegueira 100%. Resistência contra Maldição 100%.
+- **Carta de Tao Gunka** — HP máximo +100%. DEF -50. DEFM -50.
+- **Carta de Valkyrie Randgris** — Arma não pode ser quebrada. Dano físico contra todos os alvos +10%. Chance de autoconjurar Desencantar nv. 1 ao atacar: 0.5%.
+- **Carta de Vesper** — DES +2. Ignora 30% da DEFM de chefes.
+
+## Cartas sem classificação no mob_db (89)
+
+- **Carta AGI+1** — AGI +1.
+- **Carta AGI+1** — Sem efeito definido nos arquivos.
+- **Carta AGI+10** — AGI +10.
+- **Carta AGI+2** — AGI +2.
+- **Carta AGI+2** — Sem efeito definido nos arquivos.
+- **Carta AGI+3** — AGI +3.
+- **Carta AGI+3** — Sem efeito definido nos arquivos.
+- **Carta AGI+4** — AGI +4.
+- **Carta AGI+5** — AGI +5.
+- **Carta AGI+6** — AGI +6.
+- **Carta AGI+7** — AGI +7.
+- **Carta AGI+8** — AGI +8.
+- **Carta AGI+9** — AGI +9.
+- **Carta Andre Larva** — INT +1. SP máximo +10.
+- **Carta ATK+2%** — Dano físico contra todos os alvos +2%.
+- **Carta ATK+3%** — Dano físico contra todos os alvos +3%.
+- **Carta CRI+5** — Crítico +5.
+- **Carta CRI+7** — Crítico +7.
+- **Carta DEX+1** — DES +1.
+- **Carta DEX+1** — Sem efeito definido nos arquivos.
+- **Carta DEX+10** — DES +10.
+- **Carta DEX+2** — DES +2.
+- **Carta DEX+2** — Sem efeito definido nos arquivos.
+- **Carta DEX+3** — DES +3.
+- **Carta DEX+3** — Sem efeito definido nos arquivos.
+- **Carta DEX+4** — DES +4.
+- **Carta DEX+5** — DES +5.
+- **Carta DEX+6** — DES +6.
+- **Carta DEX+7** — DES +7.
+- **Carta DEX+8** — DES +8.
+- **Carta DEX+9** — DES +9.
+- **Carta FLEE+12** — Esquiva +12.
+- **Carta FLEE+6** — Esquiva +6.
+- **Carta INT+1** — INT +1.
+- **Carta INT+1** — Sem efeito definido nos arquivos.
+- **Carta INT+10** — INT +10.
+- **Carta INT+2** — INT +2.
+- **Carta INT+2** — Sem efeito definido nos arquivos.
+- **Carta INT+3** — INT +3.
+- **Carta INT+3** — Sem efeito definido nos arquivos.
+- **Carta INT+4** — INT +4.
+- **Carta INT+5** — INT +5.
+- **Carta INT+6** — INT +6.
+- **Carta INT+7** — INT +7.
+- **Carta INT+8** — INT +8.
+- **Carta INT+9** — INT +9.
+- **Carta LUK+1** — SOR +1.
+- **Carta LUK+1** — Sem efeito definido nos arquivos.
+- **Carta LUK+10** — SOR +10.
+- **Carta LUK+2** — SOR +2.
+- **Carta LUK+2** — Sem efeito definido nos arquivos.
+- **Carta LUK+3** — SOR +3.
+- **Carta LUK+3** — Sem efeito definido nos arquivos.
+- **Carta LUK+4** — SOR +4.
+- **Carta LUK+5** — SOR +5.
+- **Carta LUK+6** — SOR +6.
+- **Carta LUK+7** — SOR +7.
+- **Carta LUK+8** — SOR +8.
+- **Carta LUK+9** — SOR +9.
+- **Carta MATK+1%** — ATQM +1%.
+- **Carta MATK+2%** — ATQM +2%.
+- **Carta Scorpion King** — Dano físico contra propriedade Morto-vivo +20%.
+- **Carta Soldier Andre** — Resistência contra a raça planta +30%.
+- **Carta STR+1** — FOR +1.
+- **Carta STR+1** — Sem efeito definido nos arquivos.
+- **Carta STR+10** — FOR +10.
+- **Carta STR+2** — FOR +2.
+- **Carta STR+2** — Sem efeito definido nos arquivos.
+- **Carta STR+3** — FOR +3.
+- **Carta STR+3** — Sem efeito definido nos arquivos.
+- **Carta STR+4** — FOR +4.
+- **Carta STR+5** — FOR +5.
+- **Carta STR+6** — FOR +6.
+- **Carta STR+7** — FOR +7.
+- **Carta STR+8** — FOR +8.
+- **Carta STR+9** — FOR +9.
+- **Carta VIT+1** — VIT +1.
+- **Carta VIT+1** — Sem efeito definido nos arquivos.
+- **Carta VIT+10** — VIT +10.
+- **Carta VIT+2** — VIT +2.
+- **Carta VIT+2** — Sem efeito definido nos arquivos.
+- **Carta VIT+3** — VIT +3.
+- **Carta VIT+3** — Sem efeito definido nos arquivos.
+- **Carta VIT+4** — VIT +4.
+- **Carta VIT+5** — VIT +5.
+- **Carta VIT+6** — VIT +6.
+- **Carta VIT+7** — VIT +7.
+- **Carta VIT+8** — VIT +8.
+- **Carta VIT+9** — VIT +9.
