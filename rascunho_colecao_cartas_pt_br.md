@@ -7,7 +7,7 @@ Objetivo: transformar cartas entregues em progresso permanente de conta sem deix
 - Cada carta pode ser entregue apenas 1 vez por conta.
 - Cartas Normais concedem +1 ponto no status indicado; Mini Boss concedem +2 pontos; MVP concedem +3 pontos.
 - Os pontos viram bônus reais por faixas, com limite máximo por conta. Isso evita que centenas de cartas somem atributos diretos altos demais.
-- Bônus de dano, defesa e utilidade devem funcionar apenas em PvE. Em PvP, GvG, WoE e mapas de evento competitivo, esses bônus devem ser desligados.
+- Bônus de dano, defesa e utilidade podem funcionar de forma global na conta; os limites abaixo seguram o ganho total para não trivializar a progressão.
 - Nenhuma carta de coleção deve liberar autocast, imunidade total, redução extrema de pós-conjuração ou efeitos equivalentes ao item equipado; a coleção dá apenas status moderado.
 
 ## Conversão sugerida dos pontos
@@ -23,15 +23,15 @@ Objetivo: transformar cartas entregues em progresso permanente de conta sem deix
 | Crítico de Conta | a cada 8 pontos: Crítico +1 | +10 Crítico |
 | Defesa de Conta | a cada 10 pontos: DEF +1 e DEFM +1 | +10 DEF / +10 DEFM |
 | Resistência a Estados de Conta | a cada 10 pontos: resistência a estados +1% | +10% |
-| Utilidade PvE de Conta | a cada 20 pontos: EXP de monstros +1% ou drop comum +1% | +5% |
+| Utilidade de Conta | a cada 20 pontos: EXP de monstros +1% ou drop comum +1% | +5% |
 | Atributo Flexível de Conta | a cada 15 pontos: escolha +1 FOR/AGI/VIT/INT/DES/SOR | +3 por atributo |
 
 ## Observações para implementação
 
 - Recomenda-se mostrar ao jogador os pontos acumulados e o bônus real já convertido.
 - Se um bônus atingir o limite, pontos extras podem contar apenas para ranking/conquista, sem aumentar status.
-- Para manter classes equilibradas, dano direto escala devagar, enquanto HP/SP e utilidade PvE podem aparecer com mais frequência.
-- MVPs dão mais pontos, mas ainda respeitam os mesmos limites; isso evita que contas antigas fiquem inalcançáveis em conteúdo competitivo.
+- Para manter classes equilibradas, dano direto escala devagar, enquanto HP/SP e utilidade podem aparecer com mais frequência.
+- MVPs dão mais pontos, mas ainda respeitam os mesmos limites; isso evita que contas antigas fiquem muito distantes de contas novas.
 
 ## Bônus sugerido por carta
 
@@ -49,8 +49,8 @@ Objetivo: transformar cartas entregues em progresso permanente de conta sem deix
 | Carta de Aliot | +1 ponto de HP de Conta |
 | Carta de Aliza | +1 ponto de Atributo Flexível de Conta |
 | Carta de Alma da Ventania | +1 ponto de Atributo Flexível de Conta |
-| Carta de Alma Penada | +1 ponto de Utilidade PvE de Conta |
-| Carta de Am Mut | +1 ponto de Utilidade PvE de Conta |
+| Carta de Alma Penada | +1 ponto de Utilidade de Conta |
+| Carta de Am Mut | +1 ponto de Utilidade de Conta |
 | Carta de Ambernite | +1 ponto de Defesa de Conta |
 | Carta de Anaconda | +1 ponto de ATQ de Conta |
 | Carta de Ancião | +1 ponto de ATQ de Conta |
@@ -58,7 +58,7 @@ Objetivo: transformar cartas entregues em progresso permanente de conta sem deix
 | Carta de Andre | +1 ponto de ATQ de Conta |
 | Carta de Anjo Fajuto | +1 ponto de SP de Conta |
 | Carta de Anolian | +1 ponto de Atributo Flexível de Conta |
-| Carta de Anopheles | +1 ponto de Utilidade PvE de Conta |
+| Carta de Anopheles | +1 ponto de Utilidade de Conta |
 | Carta de Antonio | +1 ponto de Atributo Flexível de Conta |
 | Carta de Anúbis | +1 ponto de Defesa de Conta |
 | Carta de Aparição | +1 ponto de Resistência a Estados de Conta |
@@ -71,7 +71,7 @@ Objetivo: transformar cartas entregues em progresso permanente de conta sem deix
 | Carta de Arenoso | +1 ponto de Defesa de Conta |
 | Carta de Argiope | +1 ponto de Defesa de Conta |
 | Carta de Argos | +1 ponto de Resistência a Estados de Conta |
-| Carta de Armeyer Dinze | +1 ponto de Utilidade PvE de Conta |
+| Carta de Armeyer Dinze | +1 ponto de Utilidade de Conta |
 | Carta de Arvore Maldita | +1 ponto de Defesa de Conta |
 | Carta de Atirador de Pedras | +1 ponto de Precisão de Conta |
 | Carta de Atirador Wootan | +1 ponto de Precisão de Conta |
@@ -94,7 +94,7 @@ Objetivo: transformar cartas entregues em progresso permanente de conta sem deix
 | Carta de Bongun | +1 ponto de Defesa de Conta |
 | Carta de Borboleta Sanguinária | +1 ponto de ATQM de Conta |
 | Carta de Breeze | +1 ponto de Resistência a Estados de Conta |
-| Carta de Cãibra | +1 ponto de Utilidade PvE de Conta |
+| Carta de Cãibra | +1 ponto de Utilidade de Conta |
 | Carta de Caramelo | +1 ponto de ATQ de Conta |
 | Carta de Caranguejo | +1 ponto de ATQ de Conta |
 | Carta de Carat | +1 ponto de SP de Conta |
@@ -111,11 +111,11 @@ Objetivo: transformar cartas entregues em progresso permanente de conta sem deix
 | Carta de Cobold Arqueiro | +1 ponto de Precisão de Conta |
 | Carta de Cobold de Machado | +1 ponto de Crítico de Conta |
 | Carta de Cochicho | +1 ponto de HP de Conta |
-| Carta de Coelho | +1 ponto de Utilidade PvE de Conta |
+| Carta de Coelho | +1 ponto de Utilidade de Conta |
 | Carta de Condor | +1 ponto de Esquiva de Conta |
 | Carta de Congelador | +1 ponto de HP de Conta |
 | Carta de Cookie | +1 ponto de Crítico de Conta |
-| Carta de Cookie Natalino | +1 ponto de Utilidade PvE de Conta |
+| Carta de Cookie Natalino | +1 ponto de Utilidade de Conta |
 | Carta de Coringa | +1 ponto de Atributo Flexível de Conta |
 | Carta de Cornus | +1 ponto de Defesa de Conta |
 | Carta de Cornutus | +1 ponto de Defesa de Conta |
@@ -127,14 +127,14 @@ Objetivo: transformar cartas entregues em progresso permanente de conta sem deix
 | Carta de Deletério | +1 ponto de SP de Conta |
 | Carta de Deviace | +1 ponto de ATQ de Conta |
 | Carta de Deviruchi | +1 ponto de Resistência a Estados de Conta |
-| Carta de Diabinho | +1 ponto de Utilidade PvE de Conta |
+| Carta de Diabinho | +1 ponto de Utilidade de Conta |
 | Carta de Diabolik | +1 ponto de SP de Conta |
 | Carta de Dimik | +1 ponto de Atributo Flexível de Conta |
 | Carta de Dokebi | +1 ponto de Defesa de Conta |
 | Carta de Donzela Verde | +1 ponto de Crítico de Conta |
 | Carta de Draco | +1 ponto de Defesa de Conta |
 | Carta de Drainliar | +1 ponto de ATQ de Conta |
-| Carta de Dríade | +1 ponto de Utilidade PvE de Conta |
+| Carta de Dríade | +1 ponto de Utilidade de Conta |
 | Carta de Drops | +1 ponto de Precisão de Conta |
 | Carta de Drosera | +1 ponto de Precisão de Conta |
 | Carta de Druida Maligno | +1 ponto de Defesa de Conta |
@@ -143,30 +143,30 @@ Objetivo: transformar cartas entregues em progresso permanente de conta sem deix
 | Carta de Eggyra | +1 ponto de SP de Conta |
 | Carta de Egnigem Cenia | +1 ponto de ATQM de Conta |
 | Carta de Eremes Guile | +1 ponto de Precisão de Conta |
-| Carta de Ermitão Maligno | +1 ponto de Utilidade PvE de Conta |
-| Carta de Ermitão Selvagem | +1 ponto de Utilidade PvE de Conta |
+| Carta de Ermitão Maligno | +1 ponto de Utilidade de Conta |
+| Carta de Ermitão Selvagem | +1 ponto de Utilidade de Conta |
 | Carta de Errende Ebecee | +1 ponto de Atributo Flexível de Conta |
 | Carta de Escaravelho | +1 ponto de Resistência a Estados de Conta |
 | Carta de Escorpião | +1 ponto de ATQ de Conta |
-| Carta de Esfera Marinha | +1 ponto de Utilidade PvE de Conta |
+| Carta de Esfera Marinha | +1 ponto de Utilidade de Conta |
 | Carta de Esporo | +1 ponto de Atributo Flexível de Conta |
 | Carta de Esporo Venenoso | +1 ponto de Atributo Flexível de Conta |
 | Carta de Esqueleto | +1 ponto de Resistência a Estados de Conta |
 | Carta de Esqueleto Arqueiro | +1 ponto de Precisão de Conta |
-| Carta de Esqueleto General | +1 ponto de Utilidade PvE de Conta |
+| Carta de Esqueleto General | +1 ponto de Utilidade de Conta |
 | Carta de Esqueleto Operário | +1 ponto de ATQ de Conta |
 | Carta de Esqueleto Pirata | +1 ponto de Precisão de Conta |
 | Carta de Esqueleto Prisioneiro | +1 ponto de Resistência a Estados de Conta |
 | Carta de Esqueleto Soldado | +1 ponto de Crítico de Conta |
 | Carta de Estrela do Mar | +1 ponto de ATQ de Conta |
-| Carta de Estrondo | +1 ponto de Utilidade PvE de Conta |
+| Carta de Estrondo | +1 ponto de Utilidade de Conta |
 | Carta de Exterminador | +1 ponto de HP de Conta |
 | Carta de Exterminador | +1 ponto de HP de Conta |
 | Carta de Fabre | +1 ponto de HP de Conta |
 | Carta de Familiar | +1 ponto de Resistência a Estados de Conta |
 | Carta de Fen | +1 ponto de ATQM de Conta |
 | Carta de Ferrão | +1 ponto de SP de Conta |
-| Carta de Ferrão | +1 ponto de Utilidade PvE de Conta |
+| Carta de Ferrão | +1 ponto de Utilidade de Conta |
 | Carta de Ferus Escarlate | +1 ponto de SP de Conta |
 | Carta de Ferus Verde | +1 ponto de HP de Conta |
 | Carta de Filhote de Hatii | +1 ponto de Precisão de Conta |
@@ -178,10 +178,10 @@ Objetivo: transformar cartas entregues em progresso permanente de conta sem deix
 | Carta de Frus | +1 ponto de Defesa de Conta |
 | Carta de Fumacento | +1 ponto de Atributo Flexível de Conta |
 | Carta de Furador | +1 ponto de SP de Conta |
-| Carta de Gajomart | +1 ponto de Utilidade PvE de Conta |
-| Carta de Galápago | +1 ponto de Utilidade PvE de Conta |
-| Carta de Gárgula | +1 ponto de Utilidade PvE de Conta |
-| Carta de Gato de Folha | +1 ponto de Utilidade PvE de Conta |
+| Carta de Gajomart | +1 ponto de Utilidade de Conta |
+| Carta de Galápago | +1 ponto de Utilidade de Conta |
+| Carta de Gárgula | +1 ponto de Utilidade de Conta |
+| Carta de Gato de Folha | +1 ponto de Utilidade de Conta |
 | Carta de Gazeti | +1 ponto de Atributo Flexível de Conta |
 | Carta de Gerente da Torre | +1 ponto de ATQM de Conta |
 | Carta de Giearth | +1 ponto de Resistência a Estados de Conta |
@@ -196,13 +196,13 @@ Objetivo: transformar cartas entregues em progresso permanente de conta sem deix
 | Carta de Golem Estalactítico | +1 ponto de Resistência a Estados de Conta |
 | Carta de Grand Orc | +1 ponto de HP de Conta |
 | Carta de Grand Peco | +1 ponto de Atributo Flexível de Conta |
-| Carta de Gremlin | +1 ponto de Utilidade PvE de Conta |
+| Carta de Gremlin | +1 ponto de Utilidade de Conta |
 | Carta de Grizzly | +1 ponto de Resistência a Estados de Conta |
-| Carta de Grove | +1 ponto de Utilidade PvE de Conta |
+| Carta de Grove | +1 ponto de Utilidade de Conta |
 | Carta de Guardião da Floresta | +1 ponto de Atributo Flexível de Conta |
 | Carta de Guerreiro Orc | +1 ponto de HP de Conta |
 | Carta de Guerreiro Wootan | +1 ponto de Resistência a Estados de Conta |
-| Carta de Gullinbursti | +1 ponto de Utilidade PvE de Conta |
+| Carta de Gullinbursti | +1 ponto de Utilidade de Conta |
 | Carta de Harpia | +1 ponto de Defesa de Conta |
 | Carta de Hidra | +1 ponto de ATQ de Conta |
 | Carta de Hillslion | +1 ponto de ATQ de Conta |
@@ -218,7 +218,7 @@ Objetivo: transformar cartas entregues em progresso permanente de conta sem deix
 | Carta de Ísis | +1 ponto de Defesa de Conta |
 | Carta de Jakk | +1 ponto de Defesa de Conta |
 | Carta de Jiboia | +1 ponto de Resistência a Estados de Conta |
-| Carta de Jing Guai | +1 ponto de Utilidade PvE de Conta |
+| Carta de Jing Guai | +1 ponto de Utilidade de Conta |
 | Carta de Jirtas | +1 ponto de Defesa de Conta |
 | Carta de Kaho | +1 ponto de ATQ de Conta |
 | Carta de Kapha | +1 ponto de Defesa de Conta |
@@ -226,20 +226,20 @@ Objetivo: transformar cartas entregues em progresso permanente de conta sem deix
 | Carta de Kathryne Keyron | +1 ponto de ATQM de Conta |
 | Carta de Kavach Icarus | +1 ponto de Esquiva de Conta |
 | Carta de Khalitzburg | +1 ponto de Defesa de Conta |
-| Carta de Knocker | +1 ponto de Utilidade PvE de Conta |
+| Carta de Knocker | +1 ponto de Utilidade de Conta |
 | Carta de Koko | +1 ponto de Resistência a Estados de Conta |
 | Carta de Kraben | +1 ponto de Resistência a Estados de Conta |
 | Carta de Kukre | +1 ponto de Esquiva de Conta |
-| Carta de Labareda | +1 ponto de Utilidade PvE de Conta |
+| Carta de Labareda | +1 ponto de Utilidade de Conta |
 | Carta de Lagarta | +1 ponto de SP de Conta |
 | Carta de Laurell Weinder | +1 ponto de SP de Conta |
 | Carta de Lavadeira | +1 ponto de Precisão de Conta |
-| Carta de Leib Olmai | +1 ponto de Utilidade PvE de Conta |
+| Carta de Leib Olmai | +1 ponto de Utilidade de Conta |
 | Carta de Líder Cobold | +1 ponto de ATQ de Conta |
 | Carta de Lobo | +1 ponto de ATQ de Conta |
 | Carta de Lobo do Deserto | +1 ponto de ATQ de Conta |
 | Carta de Loli Ruri | +1 ponto de Atributo Flexível de Conta |
-| Carta de Lontra | +1 ponto de Utilidade PvE de Conta |
+| Carta de Lontra | +1 ponto de Utilidade de Conta |
 | Carta de Louva-a-Deus | +1 ponto de ATQ de Conta |
 | Carta de Luciola Vespa | +1 ponto de Defesa de Conta |
 | Carta de Lude | +1 ponto de ATQ de Conta |
@@ -252,7 +252,7 @@ Objetivo: transformar cartas entregues em progresso permanente de conta sem deix
 | Carta de Mao Guai | +1 ponto de ATQ de Conta |
 | Carta de Marduk | +1 ponto de Resistência a Estados de Conta |
 | Carta de Margaretha Sorin | +1 ponto de Precisão de Conta |
-| Carta de Marin | +1 ponto de Utilidade PvE de Conta |
+| Carta de Marin | +1 ponto de Utilidade de Conta |
 | Carta de Marina | +1 ponto de Resistência a Estados de Conta |
 | Carta de Marionete | +1 ponto de Defesa de Conta |
 | Carta de Marte | +1 ponto de Defesa de Conta |
@@ -265,7 +265,7 @@ Objetivo: transformar cartas entregues em progresso permanente de conta sem deix
 | Carta de Metaling | +1 ponto de ATQ de Conta |
 | Carta de Metaller | +1 ponto de Resistência a Estados de Conta |
 | Carta de Mi Gao | +1 ponto de Defesa de Conta |
-| Carta de Mímico | +1 ponto de Utilidade PvE de Conta |
+| Carta de Mímico | +1 ponto de Utilidade de Conta |
 | Carta de Mímico Ancião | +1 ponto de Esquiva de Conta |
 | Carta de Mineiros | +1 ponto de SP de Conta |
 | Carta de Mineral | +1 ponto de Defesa de Conta |
@@ -293,7 +293,7 @@ Objetivo: transformar cartas entregues em progresso permanente de conta sem deix
 | Carta de Orc Zumbi | +1 ponto de HP de Conta |
 | Carta de Ovo de Andre | +1 ponto de ATQ de Conta |
 | Carta de Ovo de Besouro-ladrão | +1 ponto de HP de Conta |
-| Carta de Ovo de Dragão | +1 ponto de Utilidade PvE de Conta |
+| Carta de Ovo de Dragão | +1 ponto de Utilidade de Conta |
 | Carta de Ovo de Peco Peco | +1 ponto de HP de Conta |
 | Carta de Palavra Morta | +1 ponto de SP de Conta |
 | Carta de Panzer Goblin | +1 ponto de Crítico de Conta |
@@ -314,10 +314,10 @@ Objetivo: transformar cartas entregues em progresso permanente de conta sem deix
 | Carta de Phendark | +1 ponto de SP de Conta |
 | Carta de Picky | +1 ponto de ATQ de Conta |
 | Carta de Picky com Casca | +1 ponto de HP de Conta |
-| Carta de Pirralho | +1 ponto de Utilidade PvE de Conta |
+| Carta de Pirralho | +1 ponto de Utilidade de Conta |
 | Carta de Plâncton | +1 ponto de Resistência a Estados de Conta |
 | Carta de Planta Carnívora | +1 ponto de Atributo Flexível de Conta |
-| Carta de Plasma Fantasma | +1 ponto de Utilidade PvE de Conta |
+| Carta de Plasma Fantasma | +1 ponto de Utilidade de Conta |
 | Carta de Poeira | +1 ponto de Defesa de Conta |
 | Carta de Poltergeist | +1 ponto de Atributo Flexível de Conta |
 | Carta de Poodle Infernal | +1 ponto de Resistência a Estados de Conta |
@@ -325,7 +325,7 @@ Objetivo: transformar cartas entregues em progresso permanente de conta sem deix
 | Carta de Porcellio | +1 ponto de HP de Conta |
 | Carta de Poring | +1 ponto de Esquiva de Conta |
 | Carta de Poring Noel | +1 ponto de ATQ de Conta |
-| Carta de Presente | +1 ponto de Utilidade PvE de Conta |
+| Carta de Presente | +1 ponto de Utilidade de Conta |
 | Carta de Pungus | +1 ponto de Resistência a Estados de Conta |
 | Carta de Punk | +1 ponto de Atributo Flexível de Conta |
 | Carta de Pupa | +1 ponto de HP de Conta |
@@ -338,7 +338,7 @@ Objetivo: transformar cartas entregues em progresso permanente de conta sem deix
 | Carta de Relógio | +1 ponto de Atributo Flexível de Conta |
 | Carta de Réquiem | +1 ponto de Resistência a Estados de Conta |
 | Carta de Rideword | +1 ponto de Defesa de Conta |
-| Carta de Rochoso | +1 ponto de Utilidade PvE de Conta |
+| Carta de Rochoso | +1 ponto de Utilidade de Conta |
 | Carta de Rocker | +1 ponto de Precisão de Conta |
 | Carta de Rosa Selvagem | +1 ponto de Esquiva de Conta |
 | Carta de Roween | +1 ponto de Esquiva de Conta |
@@ -367,11 +367,11 @@ Objetivo: transformar cartas entregues em progresso permanente de conta sem deix
 | Carta de Strouf | +1 ponto de ATQ de Conta |
 | Carta de Succubus | +1 ponto de HP de Conta |
 | Carta de Sussurro | +1 ponto de Defesa de Conta |
-| Carta de Talo de Verme | +1 ponto de Utilidade PvE de Conta |
+| Carta de Talo de Verme | +1 ponto de Utilidade de Conta |
 | Carta de Tamruan | +1 ponto de Defesa de Conta |
 | Carta de Tarou | +1 ponto de ATQ de Conta |
 | Carta de Tatacho | +1 ponto de Defesa de Conta |
-| Carta de Tengu | +1 ponto de Utilidade PvE de Conta |
+| Carta de Tengu | +1 ponto de Utilidade de Conta |
 | Carta de Titã de Gelo | +1 ponto de Defesa de Conta |
 | Carta de Trilobita | +1 ponto de SP de Conta |
 | Carta de Tritão | +1 ponto de HP de Conta |
@@ -382,15 +382,15 @@ Objetivo: transformar cartas entregues em progresso permanente de conta sem deix
 | Carta de Venatu | +1 ponto de Esquiva de Conta |
 | Carta de Vento da Colina | +1 ponto de SP de Conta |
 | Carta de Verit | +1 ponto de HP de Conta |
-| Carta de Verme Ancião | +1 ponto de Utilidade PvE de Conta |
-| Carta de Verme Sábio | +1 ponto de Utilidade PvE de Conta |
+| Carta de Verme Ancião | +1 ponto de Utilidade de Conta |
+| Carta de Verme Sábio | +1 ponto de Utilidade de Conta |
 | Carta de Violinista | +1 ponto de Atributo Flexível de Conta |
 | Carta de Vitata | +1 ponto de SP de Conta |
 | Carta de Vocal | +1 ponto de Defesa de Conta |
 | Carta de Wickebine Tres | +1 ponto de Defesa de Conta |
 | Carta de Yakuza | +1 ponto de Crítico de Conta |
 | Carta de Yao Jun | +1 ponto de Esquiva de Conta |
-| Carta de Yeti | +1 ponto de Utilidade PvE de Conta |
+| Carta de Yeti | +1 ponto de Utilidade de Conta |
 | Carta de Yoyo | +1 ponto de Esquiva de Conta |
 | Carta de Zangão | +1 ponto de ATQ de Conta |
 | Carta de Zangão Gigante | +1 ponto de ATQ de Conta |
@@ -411,7 +411,7 @@ Objetivo: transformar cartas entregues em progresso permanente de conta sem deix
 | Carta de Angeling | +2 pontos de Defesa de Conta |
 | Carta de ArchAngeling | +2 pontos de Defesa de Conta |
 | Carta de Barão Coruja | +2 pontos de Atributo Flexível de Conta |
-| Carta de Baronesa da Retribuição | +2 pontos de Utilidade PvE de Conta |
+| Carta de Baronesa da Retribuição | +2 pontos de Utilidade de Conta |
 | Carta de Bow Master | +2 pontos de Precisão de Conta |
 | Carta de Byorgue | +2 pontos de ATQM de Conta |
 | Carta de Cavaleiro Sanguinário | +2 pontos de ATQ de Conta |
@@ -480,7 +480,7 @@ Objetivo: transformar cartas entregues em progresso permanente de conta sem deix
 | Carta de Kiel D-01 | +3 pontos de ATQM de Conta |
 | Carta de Ktullanux | +3 pontos de ATQ de Conta |
 | Carta de Lady Branca | +3 pontos de ATQM de Conta |
-| Carta de Lady Tanee | +3 pontos de Utilidade PvE de Conta |
+| Carta de Lady Tanee | +3 pontos de Utilidade de Conta |
 | Carta de Lorde Seyren | +3 pontos de ATQ de Conta |
 | Carta de Maya | +3 pontos de ATQM de Conta |
 | Carta de Memória de Thanatos | +3 pontos de SP de Conta |
