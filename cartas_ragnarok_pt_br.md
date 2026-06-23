@@ -2,9 +2,9 @@
 
 Lista gerada a partir dos arquivos `mob_db_f5b4.yml` e `item_db_etc_b687.yml`, mantendo apenas nome e efeitos.
 
-Critério de separação: cartas dropadas por monstros com modo MVP ficam em MVP; monstros com `Class: Boss` sem MVP ficam em Mini Boss; os demais ficam em Normais. Cartas do `item_db` sem drop correspondente no `mob_db` ficam na seção sem classificação.
+Critério de separação: cartas dropadas por monstros com modo MVP ficam em MVP; monstros com `Class: Boss` sem MVP ficam em Mini Boss; os demais ficam em Normais. Cartas sem drop correspondente no `mob_db` foram removidas desta lista.
 
-Total: 538 cartas (364 normais, 41 mini boss, 44 MVP, 89 sem classificação).
+Total: 449 cartas (364 normais, 41 mini boss, 44 MVP).
 
 ## Cartas Normais (364)
 
@@ -463,95 +463,3 @@ Total: 538 cartas (364 normais, 41 mini boss, 44 MVP, 89 sem classificação).
 - **Carta de Tao Gunka** — HP máximo +100%. DEF -50. DEFM -50.
 - **Carta de Valkyrie Randgris** — Arma não pode ser quebrada. Dano físico contra todos os alvos +10%. Chance de autoconjurar Desencantar nv. 1 ao atacar: 0.5%.
 - **Carta de Vesper** — DES +2. Ignora 30% da DEFM de chefes.
-
-## Cartas sem classificação no mob_db (89)
-
-- **Carta AGI+1** — AGI +1.
-- **Carta AGI+1** — Sem efeito definido nos arquivos.
-- **Carta AGI+10** — AGI +10.
-- **Carta AGI+2** — AGI +2.
-- **Carta AGI+2** — Sem efeito definido nos arquivos.
-- **Carta AGI+3** — AGI +3.
-- **Carta AGI+3** — Sem efeito definido nos arquivos.
-- **Carta AGI+4** — AGI +4.
-- **Carta AGI+5** — AGI +5.
-- **Carta AGI+6** — AGI +6.
-- **Carta AGI+7** — AGI +7.
-- **Carta AGI+8** — AGI +8.
-- **Carta AGI+9** — AGI +9.
-- **Carta Andre Larva** — INT +1. SP máximo +10.
-- **Carta ATK+2%** — Dano físico contra todos os alvos +2%.
-- **Carta ATK+3%** — Dano físico contra todos os alvos +3%.
-- **Carta CRI+5** — Crítico +5.
-- **Carta CRI+7** — Crítico +7.
-- **Carta DEX+1** — DES +1.
-- **Carta DEX+1** — Sem efeito definido nos arquivos.
-- **Carta DEX+10** — DES +10.
-- **Carta DEX+2** — DES +2.
-- **Carta DEX+2** — Sem efeito definido nos arquivos.
-- **Carta DEX+3** — DES +3.
-- **Carta DEX+3** — Sem efeito definido nos arquivos.
-- **Carta DEX+4** — DES +4.
-- **Carta DEX+5** — DES +5.
-- **Carta DEX+6** — DES +6.
-- **Carta DEX+7** — DES +7.
-- **Carta DEX+8** — DES +8.
-- **Carta DEX+9** — DES +9.
-- **Carta FLEE+12** — Esquiva +12.
-- **Carta FLEE+6** — Esquiva +6.
-- **Carta INT+1** — INT +1.
-- **Carta INT+1** — Sem efeito definido nos arquivos.
-- **Carta INT+10** — INT +10.
-- **Carta INT+2** — INT +2.
-- **Carta INT+2** — Sem efeito definido nos arquivos.
-- **Carta INT+3** — INT +3.
-- **Carta INT+3** — Sem efeito definido nos arquivos.
-- **Carta INT+4** — INT +4.
-- **Carta INT+5** — INT +5.
-- **Carta INT+6** — INT +6.
-- **Carta INT+7** — INT +7.
-- **Carta INT+8** — INT +8.
-- **Carta INT+9** — INT +9.
-- **Carta LUK+1** — SOR +1.
-- **Carta LUK+1** — Sem efeito definido nos arquivos.
-- **Carta LUK+10** — SOR +10.
-- **Carta LUK+2** — SOR +2.
-- **Carta LUK+2** — Sem efeito definido nos arquivos.
-- **Carta LUK+3** — SOR +3.
-- **Carta LUK+3** — Sem efeito definido nos arquivos.
-- **Carta LUK+4** — SOR +4.
-- **Carta LUK+5** — SOR +5.
-- **Carta LUK+6** — SOR +6.
-- **Carta LUK+7** — SOR +7.
-- **Carta LUK+8** — SOR +8.
-- **Carta LUK+9** — SOR +9.
-- **Carta MATK+1%** — ATQM +1%.
-- **Carta MATK+2%** — ATQM +2%.
-- **Carta Scorpion King** — Dano físico contra propriedade Morto-vivo +20%.
-- **Carta Soldier Andre** — Resistência contra a raça planta +30%.
-- **Carta STR+1** — FOR +1.
-- **Carta STR+1** — Sem efeito definido nos arquivos.
-- **Carta STR+10** — FOR +10.
-- **Carta STR+2** — FOR +2.
-- **Carta STR+2** — Sem efeito definido nos arquivos.
-- **Carta STR+3** — FOR +3.
-- **Carta STR+3** — Sem efeito definido nos arquivos.
-- **Carta STR+4** — FOR +4.
-- **Carta STR+5** — FOR +5.
-- **Carta STR+6** — FOR +6.
-- **Carta STR+7** — FOR +7.
-- **Carta STR+8** — FOR +8.
-- **Carta STR+9** — FOR +9.
-- **Carta VIT+1** — VIT +1.
-- **Carta VIT+1** — Sem efeito definido nos arquivos.
-- **Carta VIT+10** — VIT +10.
-- **Carta VIT+2** — VIT +2.
-- **Carta VIT+2** — Sem efeito definido nos arquivos.
-- **Carta VIT+3** — VIT +3.
-- **Carta VIT+3** — Sem efeito definido nos arquivos.
-- **Carta VIT+4** — VIT +4.
-- **Carta VIT+5** — VIT +5.
-- **Carta VIT+6** — VIT +6.
-- **Carta VIT+7** — VIT +7.
-- **Carta VIT+8** — VIT +8.
-- **Carta VIT+9** — VIT +9.
