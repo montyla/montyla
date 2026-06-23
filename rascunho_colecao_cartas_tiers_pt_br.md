@@ -8,15 +8,15 @@ Esta é uma segunda ideia para a coleção de cartas. Em vez de transformar tudo
 - Cartas normais entram no tier comum, com bônus pequenos e variados.
 - Cartas Mini Boss entram no tier moderado, com bônus médios.
 - Cartas MVP entram no tier forte, com bônus mais marcantes, mas ainda limitados por teto de conta.
-- O sistema pode usar todos os atributos relevantes de Ragnarok: FOR, AGI, VIT, INT, DES, SOR, HP, SP, ATQ, ATQM, DEF, DEFM, Precisão, Esquiva, Esquiva perfeita, Crítico, velocidade de ataque, conjuração, recuperação, dano por alvo, resistência, EXP, drop e peso máximo.
+- O sistema pode usar todos os atributos relevantes de Ragnarok: FOR, AGI, VIT, INT, DES, SOR, HP, SP, ATQ, ATQM, DEF, DEFM, Precisão, Esquiva, Esquiva perfeita, Crítico, velocidade de ataque, conjuração variável, pós-conjuração, recuperação, dano por alvo, resistência, EXP, drop e peso máximo.
 
 ## Tiers de bônus
 
 | Tier | Origem | Força | Exemplos de bônus |
 | --- | --- | --- | --- |
 | Tier C | Cartas normais | Comum | atributo +1, HP +25, SP +8, ATQ/ATQM +1, Precisão/Esquiva +1 |
-| Tier B | Mini Boss | Moderado | atributo +2, HP +120, SP +35, ATQ/ATQM +4, resistência +1%, conjuração -1% |
-| Tier A | MVP | Forte | atributo +3, todos os atributos +1, HP +350, SP +100, ATQ/ATQM +12, dano +3% |
+| Tier B | Mini Boss | Moderado | atributo +2, HP +120, SP +35, ATQ/ATQM +4, resistência +1%, conjuração -1%, pós-conjuração -1% |
+| Tier A | MVP | Forte | atributo +3, todos os atributos +1, HP +350, SP +100, ATQ/ATQM +12, dano +3%, pós-conjuração -3% |
 
 ## Tabela de atributos disponíveis por tier
 
@@ -35,6 +35,7 @@ Esta é uma segunda ideia para a coleção de cartas. Em vez de transformar tudo
 | Dano crítico | +0,5% | +1% | +3% | +20% |
 | Velocidade de ataque | +0,5% | +1% | +3% | +15% |
 | Conjuração variável | -0,5% | -1% | -3% | -20% |
+| Pós-conjuração | -0,25% | -1% | -3% | -20% |
 | Dano físico / mágico geral | +0,5% | +1% | +3% | +20% |
 | Dano por raça, elemento ou tamanho | +1% | +1% | +3% | +20% por grupo |
 | Resistência por raça, elemento ou tamanho | +0,5% | +1% | +3% | +20% por grupo |
@@ -46,7 +47,7 @@ Esta é uma segunda ideia para a coleção de cartas. Em vez de transformar tudo
 ## Regras para manter balanceado
 
 - Use bônus fortes somente em cartas MVP e sempre com limite total por conta.
-- Evite bônus como imunidade total, autocast permanente, redução extrema de conjuração ou efeitos que substituem a carta equipada.
+- Evite bônus como imunidade total, autocast permanente, redução extrema de conjuração/pós-conjuração ou efeitos que substituem a carta equipada.
 - Quando uma conta bater o limite de um atributo, novas cartas daquele mesmo atributo podem virar pontos cosméticos, ranking ou conquista.
 - Para evitar favorecer uma classe só, distribua cartas entre dano físico, dano mágico, defesa, utilidade, HP/SP e atributos base.
 - Se o servidor tiver progressão longa, os limites podem ser liberados por temporada ou capítulos, mas não por carta repetida.
@@ -495,9 +496,9 @@ Esta é uma segunda ideia para a coleção de cartas. Em vez de transformar tudo
 | Carta de General Tartaruga | dano físico +3% |
 | Carta de Hatii | resistência elemental +3% |
 | Carta de Ifrit | dano contra chefes +2% |
-| Carta de Kiel D-01 | dano mágico +3% |
+| Carta de Kiel D-01 | pós-conjuração -3% |
 | Carta de Ktullanux | ATQ +12 |
-| Carta de Lady Branca | tempo de conjuração variável -3% |
+| Carta de Lady Branca | pós-conjuração -3% |
 | Carta de Lady Tanee | EXP de monstros +2% |
 | Carta de Lorde Seyren | dano físico +3% |
 | Carta de Maya | ATQM +12 |
