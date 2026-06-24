@@ -1,0 +1,54 @@
+###########################################################################
+# Convergence Random Options
+# Drop this file into: db/import/item_randomopt_db.yml
+#
+# These options store the Convergence tier in ROA_VALUE.
+# If the IDs collide with options already used by your server, change both
+# this file and npc/custom/convergence_forge.txt.
+###########################################################################
+
+Header:
+  Type: RANDOM_OPTION_DB
+  Version: 1
+
+Body:
+  - Id: 5001
+    Option: CONVERGENCE_WEAPON
+    Script: |
+      .@tier = getrandomoptinfo(ROA_VALUE);
+      if (.@tier > 0) {
+        bonus bAtkRate,.@tier;
+        bonus bMatkRate,.@tier;
+      }
+  - Id: 5002
+    Option: CONVERGENCE_ARMOR
+    Script: |
+      .@tier = getrandomoptinfo(ROA_VALUE);
+      if (.@tier > 0) {
+        bonus bMaxHPrate,.@tier;
+        bonus bDef,5 * .@tier;
+        bonus bMdef,.@tier;
+      }
+  - Id: 5003
+    Option: CONVERGENCE_GARMENT
+    Script: |
+      .@tier = getrandomoptinfo(ROA_VALUE);
+      if (.@tier > 0) {
+        bonus bFlee,3 * .@tier;
+        bonus bFlee2,.@tier;
+      }
+  - Id: 5004
+    Option: CONVERGENCE_SHOES
+    Script: |
+      .@tier = getrandomoptinfo(ROA_VALUE);
+      if (.@tier > 0) {
+        bonus bAspdRate,.@tier;
+        bonus bVariableCastrate,-1 * .@tier;
+      }
+  - Id: 5005
+    Option: CONVERGENCE_HEAD_TOP
+    Script: |
+      .@tier = getrandomoptinfo(ROA_VALUE);
+      if (.@tier > 0) {
+        bonus bAllStats,.@tier;
+      }

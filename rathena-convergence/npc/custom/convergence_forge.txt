@@ -1,0 +1,403 @@
+//===== rAthena Script =======================================
+//= Convergence Forge
+//===== Description: =========================================
+//= Zeny sink equipment tier system inspired by Tibia's
+//= Convergence mechanic. Uses Random Options to store tiers.
+//===== Installation: ========================================
+//= 1. Copy this file to npc/custom/convergence_forge.txt
+//= 2. Add "npc: npc/custom/convergence_forge.txt" to
+//=    conf/import/scripts_custom.conf
+//= 3. Copy db/import/item_randomopt_db.yml from this package.
+//= 4. Reload item DB and scripts, or restart map-server.
+//============================================================
+
+prontera,156,184,4	script	Forja de Convergencia	4_M_BLACKSMITH,{
+	disable_items;
+
+	mes "[Forja de Convergencia]";
+	mes "Eu posso aplicar tiers permanentes em equipamentos usando creditos de Convergencia.";
+	mes "Creditos atuais: " + #CONV_CREDIT + " (" + callfunc("F_Conv_FormatCredit",#CONV_CREDIT) + ").";
+	next;
+
+	switch(select("Depositar zeny:Evoluir tier - risco:Evoluir tier - Convergencia:Transferir tier - normal:Transferir tier - Convergencia:Ver custos e chances:Sair")) {
+	case 1:
+		callsub S_Deposit;
+		close;
+	case 2:
+		callsub S_Upgrade,0;
+		close;
+	case 3:
+		callsub S_Upgrade,1;
+		close;
+	case 4:
+		callsub S_Transfer,0;
+		close;
+	case 5:
+		callsub S_Transfer,1;
+		close;
+	case 6:
+		callsub S_ShowCosts;
+		close;
+	default:
+		close;
+	}
+
+S_Deposit:
+	mes "[Forja de Convergencia]";
+	mes "Cada credito custa " + .CreditUnit + " zeny.";
+	mes "O zeny e queimado no deposito; depois a forja consome os creditos.";
+	mes "Seu zeny atual: " + Zeny + ".";
+	next;
+
+	if (Zeny < .CreditUnit) {
+		mes "[Forja de Convergencia]";
+		mes "Voce precisa de pelo menos " + .CreditUnit + " zeny para depositar.";
+		return;
+	}
+
+	mes "[Forja de Convergencia]";
+	mes "Digite quanto zeny deseja converter em creditos.";
+	mes "Valores quebrados serao arredondados para baixo.";
+	input .@zeny,.CreditUnit,Zeny;
+
+	.@credit = .@zeny / .CreditUnit;
+	.@cost = .@credit * .CreditUnit;
+
+	if (.@credit <= 0 || .@cost > Zeny) {
+		mes "[Forja de Convergencia]";
+		mes "Deposito invalido.";
+		return;
+	}
+
+	mes "[Forja de Convergencia]";
+	mes "Converter " + .@cost + " zeny em " + .@credit + " creditos?";
+	next;
+	if (select("Sim:Nao") == 2)
+		return;
+
+	Zeny -= .@cost;
+	#CONV_CREDIT += .@credit;
+
+	mes "[Forja de Convergencia]";
+	mes "Deposito concluido.";
+	mes "Creditos atuais: " + #CONV_CREDIT + " (" + callfunc("F_Conv_FormatCredit",#CONV_CREDIT) + ").";
+	return;
+
+S_Upgrade:
+	.@safe = getarg(0);
+	callsub S_SelectEquip;
+	if (@conv_cancel)
+		return;
+
+	if (!getequipisequiped(@conv_equip)) {
+		mes "[Forja de Convergencia]";
+		mes "Nao ha equipamento nesse slot.";
+		return;
+	}
+
+	.@tier = callfunc("F_Conv_GetTier",@conv_equip,@conv_option);
+	if (.@tier >= .MaxTier) {
+		mes "[Forja de Convergencia]";
+		mes "Este item ja esta no tier maximo.";
+		return;
+	}
+
+	.@next = .@tier + 1;
+	.@opt_slot = callfunc("F_Conv_FindOptionSlot",@conv_equip,@conv_option);
+	if (.@opt_slot < 0) {
+		mes "[Forja de Convergencia]";
+		mes "Este item nao possui slot livre de Random Option.";
+		mes "Remova uma opcao aleatoria ou reserve um slot para Convergencia.";
+		return;
+	}
+
+	.@cost = (.@safe ? .CostConverge[.@next] : .CostNormal[.@next]);
+	.@chance = .ChanceNormal[.@next];
+
+	mes "[Forja de Convergencia]";
+	mes "Item: " + getequipname(@conv_equip);
+	mes "Slot: " + @conv_slot_name$;
+	mes "Tier atual: T" + .@tier + ".";
+	mes "Proximo tier: T" + .@next + ".";
+	mes "Custo: " + .@cost + " creditos (" + callfunc("F_Conv_FormatCredit",.@cost) + ").";
+	if (.@safe)
+		mes "Metodo: Convergencia, 100% de sucesso.";
+	else {
+		mes "Metodo: normal, " + .@chance + "% de sucesso.";
+		mes "Falha consome os creditos e pode reduzir 1 tier.";
+	}
+	next;
+
+	if (#CONV_CREDIT < .@cost) {
+		mes "[Forja de Convergencia]";
+		mes "Creditos insuficientes.";
+		mes "Voce tem " + #CONV_CREDIT + " creditos.";
+		return;
+	}
+
+	if (select("Forjar:Cancelar") == 2)
+		return;
+
+	#CONV_CREDIT -= .@cost;
+	progressbar "#00FF00",2;
+
+	if (.@safe || rand(100) < .@chance) {
+		setrandomoption(@conv_equip,.@opt_slot,@conv_option,.@next,0);
+		specialeffect2 EF_REPAIRWEAPON;
+		mes "[Forja de Convergencia]";
+		mes "Sucesso! O item agora esta em T" + .@next + ".";
+		return;
+	}
+
+	mes "[Forja de Convergencia]";
+	mes "A evolucao falhou.";
+
+	if (.@tier > 0 && rand(100) < .FailDowngradeRate) {
+		.@new_tier = .@tier - 1;
+		if (.@new_tier > 0)
+			setrandomoption(@conv_equip,.@opt_slot,@conv_option,.@new_tier,0);
+		else
+			setrandomoption(@conv_equip,.@opt_slot,0,0,0);
+
+		mes "O tier do item caiu para T" + .@new_tier + ".";
+	} else {
+		mes "O tier atual foi preservado.";
+	}
+
+	return;
+
+S_Transfer:
+	.@safe = getarg(0);
+
+	mes "[Forja de Convergencia]";
+	mes "Escolha o item de origem.";
+	mes "A origem perdera o tier ao final da transferencia.";
+	next;
+	callsub S_SelectEquip;
+	if (@conv_cancel)
+		return;
+
+	.@src_equip = @conv_equip;
+	.@src_option = @conv_option;
+	.@src_name$ = @conv_slot_name$;
+	.@src_tier = callfunc("F_Conv_GetTier",.@src_equip,.@src_option);
+	.@src_opt_slot = callfunc("F_Conv_ExistingOptionSlot",.@src_equip,.@src_option);
+
+	if (.@src_tier <= 0 || .@src_opt_slot < 0) {
+		mes "[Forja de Convergencia]";
+		mes "O item de origem nao possui tier de Convergencia.";
+		return;
+	}
+
+	if (!.@safe && .@src_tier <= 1) {
+		mes "[Forja de Convergencia]";
+		mes "Transferencia normal exige origem T2 ou maior, pois o alvo recebe tier -1.";
+		return;
+	}
+
+	mes "[Forja de Convergencia]";
+	mes "Origem: " + getequipname(.@src_equip) + " (" + .@src_name$ + ") T" + .@src_tier + ".";
+	mes "Escolha o item alvo. O alvo precisa estar T0.";
+	next;
+	callsub S_SelectEquip;
+	if (@conv_cancel)
+		return;
+
+	.@dst_equip = @conv_equip;
+	.@dst_option = @conv_option;
+	.@dst_name$ = @conv_slot_name$;
+
+	if (.@dst_equip == .@src_equip) {
+		mes "[Forja de Convergencia]";
+		mes "A origem e o alvo precisam ser slots diferentes.";
+		return;
+	}
+
+	.@dst_tier = callfunc("F_Conv_GetTier",.@dst_equip,.@dst_option);
+	if (.@dst_tier > 0) {
+		mes "[Forja de Convergencia]";
+		mes "O item alvo ja possui tier.";
+		return;
+	}
+
+	.@dst_opt_slot = callfunc("F_Conv_FindOptionSlot",.@dst_equip,.@dst_option);
+	if (.@dst_opt_slot < 0) {
+		mes "[Forja de Convergencia]";
+		mes "O alvo nao possui slot livre de Random Option.";
+		return;
+	}
+
+	.@target_tier = (.@safe ? .@src_tier : .@src_tier - 1);
+	.@cost = (.@safe ? .CostTransferConverge[.@src_tier] : .CostTransferNormal[.@src_tier]);
+
+	mes "[Forja de Convergencia]";
+	mes "Origem: " + .@src_name$ + " T" + .@src_tier + ".";
+	mes "Alvo: " + .@dst_name$ + " T0.";
+	mes "Resultado: alvo T" + .@target_tier + ".";
+	mes "Custo: " + .@cost + " creditos (" + callfunc("F_Conv_FormatCredit",.@cost) + ").";
+	if (.@safe)
+		mes "Metodo: Convergencia, sem perda de tier.";
+	else
+		mes "Metodo: normal, alvo recebe tier -1.";
+	next;
+
+	if (#CONV_CREDIT < .@cost) {
+		mes "[Forja de Convergencia]";
+		mes "Creditos insuficientes.";
+		return;
+	}
+
+	if (select("Transferir:Cancelar") == 2)
+		return;
+
+	#CONV_CREDIT -= .@cost;
+	progressbar "#00FF00",2;
+
+	setrandomoption(.@src_equip,.@src_opt_slot,0,0,0);
+	setrandomoption(.@dst_equip,.@dst_opt_slot,.@dst_option,.@target_tier,0);
+	specialeffect2 EF_REPAIRWEAPON;
+
+	mes "[Forja de Convergencia]";
+	mes "Transferencia concluida.";
+	mes "O alvo agora esta em T" + .@target_tier + ".";
+	return;
+
+S_SelectEquip:
+	.@menu$ = "";
+	for (.@i = 0; .@i < .SlotCount; .@i++) {
+		.@eq = .EquipSlot[.@i];
+		if (getequipisequiped(.@eq))
+			.@menu$ += .SlotName$[.@i] + " - " + getequipname(.@eq) + ":";
+		else
+			.@menu$ += .SlotName$[.@i] + " - [vazio]:";
+	}
+	.@menu$ += "Cancelar";
+
+	.@sel = select(.@menu$) - 1;
+	if (.@sel >= .SlotCount) {
+		@conv_cancel = 1;
+		return;
+	}
+
+	@conv_cancel = 0;
+	@conv_equip = .EquipSlot[.@sel];
+	@conv_option = .OptionId[.@sel];
+	@conv_slot_name$ = .SlotName$[.@sel];
+	return;
+
+S_ShowCosts:
+	mes "[Forja de Convergencia]";
+	mes "1 credito = " + .CreditUnit + " zeny.";
+	mes "Custos calibrados para media de 100kk de zeny por dia.";
+	next;
+
+	mes "[Evolucao normal]";
+	for (.@i = 1; .@i <= .MaxTier; .@i++)
+		mes "T" + .@i + ": " + callfunc("F_Conv_FormatCredit",.CostNormal[.@i]) + " / " + .ChanceNormal[.@i] + "%.";
+	next;
+
+	mes "[Evolucao por Convergencia]";
+	for (.@i = 1; .@i <= .MaxTier; .@i++)
+		mes "T" + .@i + ": " + callfunc("F_Conv_FormatCredit",.CostConverge[.@i]) + " / 100%.";
+	next;
+
+	mes "[Transferencia]";
+	for (.@i = 1; .@i <= .MaxTier; .@i++) {
+		if (.CostTransferNormal[.@i] > 0)
+			mes "Normal T" + .@i + ": " + callfunc("F_Conv_FormatCredit",.CostTransferNormal[.@i]) + ".";
+		mes "Convergencia T" + .@i + ": " + callfunc("F_Conv_FormatCredit",.CostTransferConverge[.@i]) + ".";
+	}
+	next;
+
+	mes "[Buffs]";
+	mes "Arma: +" + .MaxTier + "% ATK/MATK no T" + .MaxTier + ".";
+	mes "Armadura: HP%, DEF e MDEF.";
+	mes "Capa: Flee e Perfect Dodge.";
+	mes "Botas: ASPD% e reducao de conjuracao variavel.";
+	mes "Elmo topo: todos atributos.";
+	return;
+
+OnInit:
+	// CreditUnit avoids problems with servers that cap carried zeny below
+	// the most expensive tiers. 1 credit = 100,000 zeny.
+	.CreditUnit = 100000;
+	.MaxTier = 5;
+	.FailDowngradeRate = 30;
+
+	// Random option IDs. Keep these synced with db/import/item_randomopt_db.yml.
+	.OptWeapon = 5001;
+	.OptArmor = 5002;
+	.OptGarment = 5003;
+	.OptShoes = 5004;
+	.OptHeadTop = 5005;
+
+	setarray .EquipSlot[0],EQI_HAND_R,EQI_ARMOR,EQI_GARMENT,EQI_SHOES,EQI_HEAD_TOP;
+	setarray .OptionId[0],.OptWeapon,.OptArmor,.OptGarment,.OptShoes,.OptHeadTop;
+	setarray .SlotName$[0],"Arma","Armadura","Capa","Botas","Elmo topo";
+	.SlotCount = getarraysize(.EquipSlot);
+
+	// Costs are in credits, not direct zeny. With CreditUnit = 100,000:
+	// 1000 credits = 100kk, 10000 credits = 1b.
+	setarray .CostNormal[1],1000,3000,7500,15000,30000;
+	setarray .CostConverge[1],2500,7500,18000,40000,80000;
+	setarray .CostTransferNormal[1],0,3000,7500,15000,30000;
+	setarray .CostTransferConverge[1],5000,12000,25000,50000,100000;
+	setarray .ChanceNormal[1],80,65,50,35,25;
+	end;
+}
+
+function	script	F_Conv_GetTier	{
+	.@equip = getarg(0);
+	.@option = getarg(1);
+
+	for (.@i = 0; .@i < 5; .@i++) {
+		if (getequiprandomoption(.@equip,.@i,ROA_ID) == .@option)
+			return getequiprandomoption(.@equip,.@i,ROA_VALUE);
+	}
+
+	return 0;
+}
+
+function	script	F_Conv_ExistingOptionSlot	{
+	.@equip = getarg(0);
+	.@option = getarg(1);
+
+	for (.@i = 0; .@i < 5; .@i++) {
+		if (getequiprandomoption(.@equip,.@i,ROA_ID) == .@option)
+			return .@i;
+	}
+
+	return -1;
+}
+
+function	script	F_Conv_FindOptionSlot	{
+	.@equip = getarg(0);
+	.@option = getarg(1);
+
+	for (.@i = 0; .@i < 5; .@i++) {
+		if (getequiprandomoption(.@equip,.@i,ROA_ID) == .@option)
+			return .@i;
+	}
+
+	for (.@i = 0; .@i < 5; .@i++) {
+		if (getequiprandomoption(.@equip,.@i,ROA_ID) == 0)
+			return .@i;
+	}
+
+	return -1;
+}
+
+function	script	F_Conv_FormatCredit	{
+	.@credit = getarg(0);
+	.@kk = .@credit / 10;
+
+	if (.@kk >= 1000) {
+		.@whole = .@kk / 1000;
+		.@decimal = (.@kk % 1000) / 100;
+		if (.@decimal > 0)
+			return .@whole + "." + .@decimal + "b zeny";
+		return .@whole + "b zeny";
+	}
+
+	return .@kk + "kk zeny";
+}
