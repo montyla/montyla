@@ -1,9 +1,9 @@
 -	script	DoubleExpCtrl	-1,{
 OnInit:
-	.NormalBase = 400;
-	.NormalJob = 400;
-	.DoubleBase = 800;
-	.DoubleJob = 800;
+	.NormalBase = 300;
+	.NormalJob = 300;
+	.DoubleBase = 400;
+	.DoubleJob = 400;
 
 	stopnpctimer "DoubleExpCtrl";
 	.@now = gettimetick(2);
@@ -65,7 +65,7 @@ OnExpire:
 	setbattleflag "job_exp_rate", .NormalJob;
 	$DoubleExpEnd = 0;
 	callsub S_ReloadMobDB;
-	announce "O bonus de 100% a mais de XP do servidor terminou! As taxas voltaram para 4x Base / 4x Job.", bc_all, 0xFF6060;
+	announce "O bonus de 100% a mais de XP do servidor terminou! As taxas voltaram para 3x Base / 3x Job.", bc_all, 0xFF6060;
 	end;
 
 S_ReloadMobDB:
@@ -79,8 +79,8 @@ prontera,142,173,5	script	[Doar EXP]	4_M_MANAGER,{
 	mes .npc$;
 	mes "Ol�, ^0064FF" + strcharinfo(0) + "^000000!";
 	mes "Doe Cash e libere ^FF0000100% a mais de XP^000000 para todo o servidor.";
-	mes "Taxa normal: ^0064FF4x Base / 4x Job^000000.";
-	mes "Com 100% a mais de XP: ^FF00008x Base / 8x Job^000000.";
+	mes "Taxa normal: ^0064FF3x Base / 3x Job^000000.";
+	mes "Com bonus de XP: ^FF00004x Base / 4x Job^000000.";
 	mes "As doa��es acumulam tempo � quanto mais doar, mais longa a bonifica��o.";
 	next;
 
@@ -103,7 +103,7 @@ S_Status:
 		.@h = .@remain / 3600;
 		.@m = (.@remain % 3600) / 60;
 		mes "^3CB371100% a mais de XP est� ATIVO!^000000";
-		mes "Taxa atual: ^FF00008x Base / 8x Job^000000.";
+		mes "Taxa atual: ^FF00004x Base / 4x Job^000000.";
 		if (.@h > 0 && .@m > 0)
 			mes "Tempo restante: ^0064FF" + .@h + "h " + .@m + "min^000000.";
 		else if (.@h > 0)
@@ -113,7 +113,7 @@ S_Status:
 		mes "T�rmino previsto: ^777777" + gettimestr("%d/%m/%Y %H:%M", 21, $DoubleExpEnd) + "^000000.";
 	} else {
 		mes "100% a mais de XP est� ^777777inativo^000000 no momento.";
-		mes "Taxa atual: ^0064FF4x Base / 4x Job^000000.";
+		mes "Taxa atual: ^0064FF3x Base / 3x Job^000000.";
 		mes "Seja o primeiro a doar e beneficiar todos!";
 	}
 	close;
@@ -170,7 +170,7 @@ S_Donate:
 	close2;
 
 	if (.@first)
-		announce strcharinfo(0) + " ativou 100% a mais de XP no servidor! Taxas 8x/8x por " + .@time$ + ".", bc_all, 0x33CC33;
+		announce strcharinfo(0) + " ativou o bonus de XP no servidor! Taxas 4x/4x por " + .@time$ + ".", bc_all, 0x33CC33;
 	else
 		announce strcharinfo(0) + " estendeu o bonus de 100% a mais de XP! Tempo total restante: " + .@time$ + ".", bc_all, 0x33CC33;
 	end;
