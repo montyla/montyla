@@ -1,0 +1,182 @@
+-	script	DoubleExpCtrl	-1,{
+OnInit:
+	.NormalBase = 300;
+	.NormalJob = 300;
+	.DoubleBase = 600;
+	.DoubleJob = 600;
+
+	stopnpctimer "DoubleExpCtrl";
+	.@now = gettimetick(2);
+	if ($DoubleExpEnd > .@now) {
+		setbattleflag "base_exp_rate", .DoubleBase;
+		setbattleflag "job_exp_rate", .DoubleJob;
+		callsub S_ReloadMobDB;
+		donpcevent "DoubleExpCtrl::OnRefreshTimer";
+	} else {
+		$DoubleExpEnd = 0;
+		if (getbattleflag("base_exp_rate") == .DoubleBase) {
+			setbattleflag "base_exp_rate", .NormalBase;
+			setbattleflag "job_exp_rate", .NormalJob;
+			callsub S_ReloadMobDB;
+		}
+	}
+	end;
+
+OnRefreshTimer:
+	stopnpctimer "DoubleExpCtrl";
+	.@now = gettimetick(2);
+	if ($DoubleExpEnd <= .@now) {
+		donpcevent "DoubleExpCtrl::OnExpire";
+		end;
+	}
+	setnpctimer 0, "DoubleExpCtrl";
+	initnpctimer "DoubleExpCtrl";
+	end;
+
+OnTimer30000:
+	if ($DoubleExpEnd <= 0) {
+		stopnpctimer "DoubleExpCtrl";
+		end;
+	}
+	if (gettimetick(2) >= $DoubleExpEnd) {
+		stopnpctimer "DoubleExpCtrl";
+		donpcevent "DoubleExpCtrl::OnExpire";
+		end;
+	}
+	stopnpctimer "DoubleExpCtrl";
+	setnpctimer 0, "DoubleExpCtrl";
+	initnpctimer "DoubleExpCtrl";
+	end;
+
+OnActivate:
+	setbattleflag "base_exp_rate", .DoubleBase;
+	setbattleflag "job_exp_rate", .DoubleJob;
+	callsub S_ReloadMobDB;
+	end;
+
+OnExpire:
+	stopnpctimer "DoubleExpCtrl";
+	.@now = gettimetick(2);
+	if ($DoubleExpEnd > .@now) {
+		donpcevent "DoubleExpCtrl::OnRefreshTimer";
+		end;
+	}
+	setbattleflag "base_exp_rate", .NormalBase;
+	setbattleflag "job_exp_rate", .NormalJob;
+	$DoubleExpEnd = 0;
+	callsub S_ReloadMobDB;
+	announce "O bonus de 100% a mais de XP do servidor terminou! As taxas voltaram para 3x Base / 3x Job.", bc_all, 0xFF6060;
+	end;
+
+S_ReloadMobDB:
+	charcommand "@reloadmobdb";
+	return;
+}
+
+prontera,142,173,5	script	[Doar EXP]	4_M_MANAGER,{
+	.npc$ = "[^FF7700Doa��o 100% a mais de XP^000000]";
+
+	mes .npc$;
+	mes "Ol�, ^0064FF" + strcharinfo(0) + "^000000!";
+	mes "Doe Cash e libere ^FF0000100% a mais de XP^000000 para todo o servidor.";
+	mes "Taxa normal: ^0064FF3x Base / 3x Job^000000.";
+	mes "Com 100% a mais de XP: ^FF00006x Base / 6x Job^000000.";
+	mes "As doa��es acumulam tempo � quanto mais doar, mais longa a bonifica��o.";
+	next;
+
+	switch (select("^3CB371[�]^000000 Ver status atual:^3CB371[�]^000000 1 Hora (20.000 Cash):^3CB371[�]^000000 2 Horas (40.000 Cash):^3CB371[�]^000000 3 Horas (60.000 Cash):^3CB371[�]^000000 4 Horas (80.000 Cash):^3CB371[�]^000000 5 Horas (100.000 Cash):^ff0000[�]^000000 Sair")) {
+		case 1: callsub S_Status; break;
+		case 2: callsub S_Donate, 1, 20000; break;
+		case 3: callsub S_Donate, 2, 40000; break;
+		case 4: callsub S_Donate, 3, 60000; break;
+		case 5: callsub S_Donate, 4, 80000; break;
+		case 6: callsub S_Donate, 5, 100000; break;
+		default: close;
+	}
+	end;
+
+S_Status:
+	.@now = gettimetick(2);
+	mes .npc$;
+	if ($DoubleExpEnd > .@now) {
+		.@remain = $DoubleExpEnd - .@now;
+		.@h = .@remain / 3600;
+		.@m = (.@remain % 3600) / 60;
+		mes "^3CB371100% a mais de XP est� ATIVO!^000000";
+		mes "Taxa atual: ^FF00006x Base / 6x Job^000000.";
+		if (.@h > 0 && .@m > 0)
+			mes "Tempo restante: ^0064FF" + .@h + "h " + .@m + "min^000000.";
+		else if (.@h > 0)
+			mes "Tempo restante: ^0064FF" + .@h + " hora(s)^000000.";
+		else
+			mes "Tempo restante: ^0064FF" + .@m + " minuto(s)^000000.";
+		mes "T�rmino previsto: ^777777" + gettimestr("%d/%m/%Y %H:%M", 21, $DoubleExpEnd) + "^000000.";
+	} else {
+		mes "100% a mais de XP est� ^777777inativo^000000 no momento.";
+		mes "Taxa atual: ^0064FF3x Base / 3x Job^000000.";
+		mes "Seja o primeiro a doar e beneficiar todos!";
+	}
+	close;
+
+S_Donate:
+	.@hours = getarg(0);
+	.@cost = getarg(1);
+	.@seconds = .@hours * 3600;
+
+	if (#CASHPOINTS < .@cost) {
+		mes .npc$;
+		mes "Voc� n�o possui Cash suficiente.";
+		mes "Necess�rio: ^FF0000" + .@cost + "^000000 Cash.";
+		mes "Seu saldo: ^0064FF" + #CASHPOINTS + "^000000 Cash.";
+		close;
+	}
+
+	mes .npc$;
+	mes "Confirmar doa��o de ^FF0000" + .@cost + "^000000 Cash?";
+	mes "Benef�cio: ^0064FF" + .@hours + " hora(s)^000000 com 100% a mais de XP para todo o servidor.";
+	mes "Seu saldo ap�s a doa��o: ^777777" + (#CASHPOINTS - .@cost) + "^000000 Cash.";
+	next;
+	if (select("^3CB371[�]^000000 Confirmar:^ff0000[�]^000000 Cancelar") == 2)
+		close;
+
+	set #CASHPOINTS, #CASHPOINTS - .@cost;
+
+	.@now = gettimetick(2);
+	.@first = 0;
+	if ($DoubleExpEnd <= .@now) {
+		$DoubleExpEnd = .@now + .@seconds;
+		.@first = 1;
+	} else {
+		$DoubleExpEnd += .@seconds;
+	}
+
+	if (.@first)
+		donpcevent "DoubleExpCtrl::OnActivate";
+	donpcevent "DoubleExpCtrl::OnRefreshTimer";
+
+	.@remain = $DoubleExpEnd - gettimetick(2);
+	.@h = .@remain / 3600;
+	.@m = (.@remain % 3600) / 60;
+	if (.@h > 0 && .@m > 0)
+		.@time$ = .@h + "h " + .@m + "min";
+	else if (.@h > 0)
+		.@time$ = .@h + " hora(s)";
+	else
+		.@time$ = .@m + " minuto(s)";
+
+	mes .npc$;
+	mes "^3CB371Doa��o realizada com sucesso!^000000";
+	mes "Obrigado por apoiar o servidor, ^0064FF" + strcharinfo(0) + "^000000!";
+	close2;
+
+	if (.@first)
+		announce strcharinfo(0) + " ativou 100% a mais de XP no servidor! Taxas 6x/6x por " + .@time$ + ".", bc_all, 0x33CC33;
+	else
+		announce strcharinfo(0) + " estendeu o bonus de 100% a mais de XP! Tempo total restante: " + .@time$ + ".", bc_all, 0x33CC33;
+	end;
+
+OnInit:
+    .@npc_id = getnpcid(0);
+    setunitdata (getnpcid(0), UNPC_GROUP_ID, 71);
+    setnpctalk "100% a mais de XP", 4000;
+}
