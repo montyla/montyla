@@ -1,0 +1,15 @@
+// Overrides aplicados em cima do pacote oficial PT-BR (map_msg_por.conf).
+// Completa strings que o arquivo original deixou em inglês.
+
+669: Você não pode capturar bichinhos neste mapa.
+695: Rebelde
+697: Invocador
+698: Mini Invocador
+699: Mini Ninja
+717: Parabéns! Você é o MVP! Sua recompensa de EXP é %llu!!
+756: Mini Mestre Taekwon
+757: Mini Espiritualista
+782: Imperador das Estrelas
+783: Ceifador de Almas
+784: Mini Imperador das Estrelas
+785: Mini Ceifador de Almas

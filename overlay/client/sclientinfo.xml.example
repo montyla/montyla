@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<clientinfo>
+	<desc>Montyla Gold Times — exemplo de cliente pt-BR</desc>
+	<servicetype>brazil</servicetype>
+	<servertype>primary</servertype>
+	<connection>
+		<display>Montyla Gold Times</display>
+		<address>127.0.0.1</address>
+		<port>6900</port>
+		<version>55</version>
+		<!-- 12 = Brasil (bRO). Clientes 2018 com patch UTF-8 podem usar 1. -->
+		<langtype>12</langtype>
+		<registrationweb></registrationweb>
+		<aid>
+			<admin>2000000</admin>
+		</aid>
+	</connection>
+</clientinfo>

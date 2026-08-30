@@ -9,7 +9,11 @@ if [[ ! -d "$RATHENA_DIR/conf" ]]; then
   exit 1
 fi
 
-mkdir -p "$RATHENA_DIR/conf/import" "$RATHENA_DIR/src/custom" "$RATHENA_DIR/npc/custom/gold_times"
+mkdir -p \
+  "$RATHENA_DIR/conf/import" \
+  "$RATHENA_DIR/conf/msg_conf/import" \
+  "$RATHENA_DIR/src/custom" \
+  "$RATHENA_DIR/npc/custom/gold_times"
 
 if [[ -d "$OVERLAY_DIR/conf/import" ]]; then
   cp -a "$OVERLAY_DIR/conf/import/." "$RATHENA_DIR/conf/import/"
@@ -17,9 +21,24 @@ fi
 if [[ -d "$OVERLAY_DIR/src/custom" ]]; then
   cp -a "$OVERLAY_DIR/src/custom/." "$RATHENA_DIR/src/custom/"
 fi
-if [[ -d "$OVERLAY_DIR/npc/custom/gold_times" ]]; then
-  cp -a "$OVERLAY_DIR/npc/custom/gold_times/." "$RATHENA_DIR/npc/custom/gold_times/"
+if [[ -d "$OVERLAY_DIR/npc/custom" ]]; then
+  cp -a "$OVERLAY_DIR/npc/custom/." "$RATHENA_DIR/npc/custom/"
 fi
+if [[ -f "$OVERLAY_DIR/conf/motd.txt" ]]; then
+  cp -a "$OVERLAY_DIR/conf/motd.txt" "$RATHENA_DIR/conf/motd.txt"
+fi
+if [[ -f "$OVERLAY_DIR/conf/msg_conf/login_msg.conf" ]]; then
+  cp -a "$OVERLAY_DIR/conf/msg_conf/login_msg.conf" "$RATHENA_DIR/conf/msg_conf/login_msg.conf"
+fi
+if [[ -f "$OVERLAY_DIR/conf/msg_conf/char_msg.conf" ]]; then
+  cp -a "$OVERLAY_DIR/conf/msg_conf/char_msg.conf" "$RATHENA_DIR/conf/msg_conf/char_msg.conf"
+fi
+if [[ -f "$OVERLAY_DIR/conf/msg_conf/import/map_msg_eng_conf.txt" ]]; then
+  cp -a "$OVERLAY_DIR/conf/msg_conf/import/map_msg_eng_conf.txt" \
+    "$RATHENA_DIR/conf/msg_conf/import/map_msg_eng_conf.txt"
+fi
+
+python3 "$ROOT/scripts/localize-ptbr.py" "$RATHENA_DIR"
 
 CUSTOM_CONF="$RATHENA_DIR/npc/scripts_custom.conf"
 enable_npc() {
@@ -41,4 +60,4 @@ if [[ -f "$CUSTOM_CONF" ]]; then
   enable_npc "npc/custom/gold_times/core.txt"
 fi
 
-log "Gold Times overlay applied"
+log "Gold Times overlay applied (locale pt-BR)"
