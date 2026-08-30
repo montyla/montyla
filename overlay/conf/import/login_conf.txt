@@ -5,4 +5,4 @@ use_MD5_passwords: no
 chars_per_account: 9
 vip_group: 5
 ipban_enable: yes
-// Create a client account with the _M or _F suffix (example: player_M).
+// Create a client account with the _M or _F suffix (example: jogador_M).

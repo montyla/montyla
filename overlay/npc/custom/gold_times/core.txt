@@ -1,22 +1,23 @@
 //===== Montyla Gold Times ===================================
-//= Prontera welcome board and GM helper.
+//= Quadro de boas-vindas em Prontera (pt-BR).
 //============================================================
 
 prontera,156,191,4	script	Quadro Gold Times	837,{
 	mes "[Montyla Gold Times]";
-	mes "Servidor classico 99/70 Pre-Renewal.";
+	mes "Servidor clássico 99/70 Pré-Renewal.";
+	mes "Idioma padrão: português brasileiro.";
 	mes "EXP e drops em 10x. Cartas em 5x.";
 	next;
-	mes "NPCs liberados nas capitais:";
+	mes "NPCs nas capitais:";
 	mes "- Curandeiro";
-	mes "- Warper";
-	mes "- Job Master";
-	mes "- Reset de status";
+	mes "- Teleporte";
+	mes "- Mestre de Classes";
+	mes "- Reset de Status";
 	mes "- Estilista";
-	mes "- Platinum Skills";
+	mes "- Habilidades Platinum";
 	next;
 	mes "Conta de desenvolvimento:";
-	mes "usuario: montyla";
+	mes "usuário: montyla";
 	mes "senha: montyla";
 	mes "Crie outras contas no cliente com sufixo _M ou _F.";
 	close;
@@ -24,6 +25,16 @@ prontera,156,191,4	script	Quadro Gold Times	837,{
 
 -	script	GT_OnInit	-1,{
 OnInit:
-	announce "Montyla Gold Times 99/70 online.", bc_all, 0xFFD700;
+	announce "Montyla Gold Times 99/70 online. Bem-vindos!", bc_all, 0xFFD700;
+	end;
+}
+
+// Define português brasileiro como idioma da conta na primeira visita.
+// O pacote PT-BR também ocupa o slot inglês (langtype 0), então a
+// primeira sessão já aparece em português mesmo antes deste save.
+-	script	GT_Locale	-1,{
+OnPCLoginEvent:
+	if (#langtype == 0)
+		#langtype = 8;
 	end;
 }
