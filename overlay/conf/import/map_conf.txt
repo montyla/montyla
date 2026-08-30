@@ -1,0 +1,7 @@
+// Gold Times — map server
+char_ip: 127.0.0.1
+map_ip: 127.0.0.1
+bind_ip: 127.0.0.1
+autosave_time: 60
+// Keep the console quieter during Cloud Agent health checks.
+console_silent: 0
