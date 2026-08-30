@@ -1,0 +1,29 @@
+//===== Montyla Gold Times ===================================
+//= Prontera welcome board and GM helper.
+//============================================================
+
+prontera,156,191,4	script	Quadro Gold Times	837,{
+	mes "[Montyla Gold Times]";
+	mes "Servidor classico 99/70 Pre-Renewal.";
+	mes "EXP e drops em 10x. Cartas em 5x.";
+	next;
+	mes "NPCs liberados nas capitais:";
+	mes "- Curandeiro";
+	mes "- Warper";
+	mes "- Job Master";
+	mes "- Reset de status";
+	mes "- Estilista";
+	mes "- Platinum Skills";
+	next;
+	mes "Conta de desenvolvimento:";
+	mes "usuario: montyla";
+	mes "senha: montyla";
+	mes "Crie outras contas no cliente com sufixo _M ou _F.";
+	close;
+}
+
+-	script	GT_OnInit	-1,{
+OnInit:
+	announce "Montyla Gold Times 99/70 online.", bc_all, 0xFFD700;
+	end;
+}

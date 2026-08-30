@@ -1,0 +1,11 @@
+// Gold Times — character server
+server_name: Montyla
+wisp_server_name: Montyla
+login_ip: 127.0.0.1
+char_ip: 127.0.0.1
+bind_ip: 127.0.0.1
+start_zeny: 10000
+char_new: yes
+max_connect_user: -1
+autosave_time: 60
+pincode_enabled: no
