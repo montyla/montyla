@@ -23,9 +23,10 @@ if [[ -f /var/run/mysqld/mysqld.pid ]] && ! kill -0 "$(cat /var/run/mysqld/mysql
 fi
 
 log "Starting mysqld"
+# Redirect to /tmp: the shell applies > as the current user, not as sudo.
 sudo mysqld_safe --datadir=/var/lib/mysql --socket="$MYSQL_SOCKET" \
   --pid-file=/var/run/mysqld/mysqld.pid --bind-address=127.0.0.1 \
-  >/var/log/mysql/mysqld-safe.log 2>&1 &
+  >/tmp/mysqld-safe.log 2>&1 &
 
 for _ in $(seq 1 60); do
   if sudo mysqladmin --socket="$MYSQL_SOCKET" ping --silent >/dev/null 2>&1; then
@@ -36,5 +37,5 @@ for _ in $(seq 1 60); do
 done
 
 log "MariaDB failed to become ready"
-tail -n 50 /var/log/mysql/mysqld-safe.log /var/log/mysql/error.log 2>/dev/null || true
+tail -n 50 /tmp/mysqld-safe.log /var/log/mysql/error.log 2>/dev/null || true
 exit 1
