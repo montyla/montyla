@@ -1,0 +1,32 @@
+WARP — patches para o Ragexe 2021-11-03 (PACKETVER 20211103)
+============================================================
+
+Cliente: 2021-11-03_Ragexe_1635926200
+Download: http://nemo.herc.ws/downloads/2021-11-03_Ragexe_1635926200/
+WARP:     https://github.com/Neo-Mind/WARP
+
+1. Abra WARP.exe
+2. Load Client → o Ragexe 2021-11-03 (NUNCA o Ragexe.exe da Gravity)
+3. Select Recommended
+4. Marque:
+
+   [x] Load custom ClientInfo file
+       Caminho: <pasta do kRO>\data\clientinfo.xml
+   [x] Read Data Folder First
+   [x] Enable DNS Support
+   [x] Disable Nagle Algorithm
+   [x] Remove Gravity Ads
+   [x] Restore Login Window   (se existir)
+   [x] Always load Korea ExternalSettings lua file  (se existir)
+   [x] Use Custom Window Title → MeuRO
+
+5. NAO marque no primeiro teste:
+   [ ] Skip Packet Obfuscation / Disable Packet Encryption
+   [ ] Ignore /account: command line argument
+
+   O rAthena ja tem ofuscacao ligada. Se desligar so no cliente, o login recusa.
+
+6. Apply Patches
+7. Salve em: <pasta do kRO>\MeuRO.exe
+
+Abra SEMPRE o MeuRO.exe patchado, nunca o exe original.
